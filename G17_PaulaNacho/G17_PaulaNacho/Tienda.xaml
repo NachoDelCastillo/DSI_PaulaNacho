@@ -8,7 +8,95 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BorderThickness" Value="5" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Height" Value="170"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="FontStyle" Value="Normal"/>
+            <Setter Property="FontFamily" Value="TimesNewRoman"/>
+        </Style>
+    </Page.Resources>
 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Border Background="MidnightBlue"/>
+        <Border Grid.Row="1" Background="#2f5cb6"/>
+        <Border Grid.Row="2" Background="DodgerBlue"/>
+
+        <ScrollViewer x:Name="MainImageScroller"
+                      Grid.Row="1"
+                      ZoomMode="Enabled"
+                      HorizontalScrollMode="Auto"
+                      HorizontalScrollBarVisibility="Auto"
+                      HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch"
+                      IsTabStop="True"
+                      TabIndex="2">
+
+            <StackPanel Grid.Row="1"
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Orientation="Horizontal"  
+                    Spacing="100">
+
+                <StackPanel Grid.Row="1"
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Spacing="100"> 
+
+                    <Button Background="Yellow" BorderBrush="YellowGreen">
+                        <StackPanel Orientation="Vertical" Spacing="2" >
+                            <Image Source="Assets/Iconos/incognito.png" Height="50" VerticalAlignment="Top"/>
+                            <TextBlock FontWeight="Bold" HorizontalAlignment="Center" Text="Historia"></TextBlock>
+                            <TextBlock FontSize="13" TextWrapping="Wrap" 
+                               Text="Embárcate en esta aventura para salvar el reino de Oniria"></TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                </StackPanel>
+                <StackPanel Grid.Row="1"
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Spacing="100">
+
+                    <Button Background="Yellow" BorderBrush="YellowGreen">
+                        <StackPanel Orientation="Vertical" Spacing="2" >
+                            <Image Source="Assets/Iconos/historia.png" Height="50" VerticalAlignment="Top"/>
+                            <TextBlock FontWeight="Bold" HorizontalAlignment="Center" Text="Historia"></TextBlock>
+                            <TextBlock FontSize="13" TextWrapping="Wrap" 
+                               Text="Embárcate en esta aventura para salvar el reino de Oniria"></TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Background="DeepSkyBlue" BorderBrush="DarkSlateBlue">
+                        <StackPanel Orientation="Vertical" Spacing="2" >
+                            <Image Source="Assets/Iconos/lucha.png" Height="50" VerticalAlignment="Top"/>
+                            <TextBlock FontWeight="Bold" HorizontalAlignment="Center" Text="Lucha"></TextBlock>
+                            <TextBlock FontSize="13" TextWrapping="Wrap" Text="¡Aguanta luchando contra los enemigos más fuertes!"></TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Background="Yellow" BorderBrush="YellowGreen">
+                        <StackPanel Orientation="Vertical" Spacing="2" >
+                            <Image Source="Assets/Iconos/historia.png" Height="50" VerticalAlignment="Top"/>
+                            <TextBlock FontWeight="Bold" HorizontalAlignment="Center" Text="Historia"></TextBlock>
+                            <TextBlock FontSize="13" TextWrapping="Wrap" 
+                               Text="Embárcate en esta aventura para salvar el reino de Oniria"></TextBlock>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+
+
+        </ScrollViewer>
     </Grid>
 </Page>
