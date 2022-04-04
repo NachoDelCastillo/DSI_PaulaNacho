@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Iconos\ajustes.png" />
+    <Content Include="Assets\Iconos\banner.png" />
     <Content Include="Assets\Iconos\dinero.png" />
     <Content Include="Assets\Iconos\gamepad.png" />
     <Content Include="Assets\Iconos\historia.png" />
