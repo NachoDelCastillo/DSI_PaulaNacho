@@ -24,6 +24,9 @@
             <RowDefinition Height="20*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
+        <Border Background="MidnightBlue"/>
+        <Border Grid.Row="1" Background="#2f5cb6"/>
+        <Border Grid.Row="2" Background="DodgerBlue"/>
         <StackPanel Grid.Row="1"
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
