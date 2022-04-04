@@ -9,10 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Page.Resources>
         <Style TargetType="Button">
-            <Setter Property="BorderThickness" Value="5" />
+            <Setter Property="BorderThickness" Value="8" />
             <Setter Property="Foreground" Value="Black" />
-            <Setter Property="Height" Value="170"/>
-            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="300"/>
+            <Setter Property="Width" Value="270"/>
             <Setter Property="CornerRadius" Value="8"/>
         </Style>
     </Page.Resources>
@@ -35,26 +35,27 @@
 
             <Button Background="Yellow" BorderBrush="YellowGreen">
                 <StackPanel Orientation="Vertical" Spacing="2" >
-                    <Image Source="Assets/Iconos/historia.png" Height="50" VerticalAlignment="Top"/>
-                    <TextBlock FontWeight="Bold" HorizontalAlignment="Center" Text="Historia"></TextBlock>
-                    <TextBlock FontSize="13" TextWrapping="Wrap" 
+                    <Image Source="Assets/Iconos/historia.png" Height="80" VerticalAlignment="Top"/>
+                    <TextBlock FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Text="Historia"></TextBlock>
+                    <TextBlock FontSize="27" TextWrapping="Wrap" TextAlignment="Center"
                                Text="Embárcate en esta aventura para salvar el reino de Oniria"></TextBlock>
                 </StackPanel>
             </Button>
 
             <Button Background="DeepSkyBlue" BorderBrush="DarkSlateBlue">
                 <StackPanel Orientation="Vertical" Spacing="2" >
-                    <Image Source="Assets/Iconos/lucha.png" Height="50" VerticalAlignment="Top"/>
-                    <TextBlock FontWeight="Bold" HorizontalAlignment="Center" Text="Lucha"></TextBlock>
-                    <TextBlock FontSize="13" TextWrapping="Wrap" Text="¡Aguanta luchando contra los enemigos más fuertes!"></TextBlock>
+                    <Image Source="Assets/Iconos/lucha.png" Height="80" VerticalAlignment="Top"/>
+                    <TextBlock FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Text="Lucha"></TextBlock>
+                    <TextBlock FontSize="27" TextAlignment="Center" TextWrapping="Wrap" Text="¡Aguanta luchando contra los enemigos más fuertes!"></TextBlock>
                 </StackPanel>
             </Button>
         </StackPanel>
 
-        <Image Source="Assets/Iconos/ajustes.png" HorizontalAlignment="Right" Margin="5,5,7,5"/>
+        <Image Source="Assets/Iconos/ajustes.png" HorizontalAlignment="Right" Margin="10,10,15,10"/>
         <Image Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png"></Image>
 
-        <TextBlock Text="ANCIENT CARDS" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="23" FontWeight="Bold" Grid.Row="1"></TextBlock>
+        <TextBlock Text="ANCIENT CARDS" VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   FontSize="40" FontWeight="Bold" Foreground="White" Grid.Row="1"></TextBlock>
  
         <StackPanel Grid.Row="3" 
                     Orientation="Horizontal" 
@@ -68,12 +69,14 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <TextBlock x:Name="dineroTot"
-                       FontSize="18"
-                   Text="1200"
-                   Margin="10,5,5,5"
-                   FontWeight="Bold">
+                       FontSize="32"
+                       Foreground="White"
+                       TextAlignment="Center"
+                       Text="1200"
+                       Margin="10,5,5,5"
+                       FontWeight="Bold" Height="51">
             </TextBlock>
-            <Image Source="Assets/Iconos/dinero.png"  Margin="5" />
+            <Image Source="Assets/Iconos/dinero.png"  Margin="15" />
 
         </StackPanel>
 
