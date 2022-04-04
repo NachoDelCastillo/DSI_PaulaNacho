@@ -22,7 +22,7 @@
             <Setter Property="BorderThickness" Value="5" />
             <Setter Property="Foreground" Value="Black" />
             <!--<Setter Property="Height" Value="170"/>-->
-            <!--<Setter Property="Width" Value="120"/>--> 
+            <!--<Setter Property="Width" Value="120"/>-->
             <!--<Setter Property="CornerRadius" Value="8"/>-->
             <Setter Property="FontStyle" Value="Normal"/>
             <!--<Setter Property="FontFamily" Value="TimesNewRoman"/>
@@ -58,21 +58,68 @@
 
 
         <StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Vertical">
+            <Image Width="800" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png"></Image>
+
+            <ScrollViewer ZoomMode="Enabled" MaxZoomFactor="10"
+              HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Visible"
+              Height="378" Width="1034">
+
+                <StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Vertical">
+
+                    <StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Horizontal">
+                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                    </StackPanel>
+                    <StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Horizontal">
+                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                    </StackPanel>
+                    <StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Horizontal">
+                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                    </StackPanel>
+                    <StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Horizontal">
+                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
             <!--<Image Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png"></Image>-->
 
-            <ScrollViewer x:Name="MainImageScroller"
+            <!--<Image Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png"></Image>-->
+
+            <!--<ScrollViewer x:Name="MainImageScroller"
                       Grid.Row="1"
                       ZoomMode="Enabled"
                       HorizontalScrollMode="Auto"
                       HorizontalScrollBarVisibility="Auto"
                       HorizontalAlignment="Stretch"
-                      VerticalAlignment="Stretch"
                       IsTabStop="True"
-                      TabIndex="2">
+                      TabIndex="2" Width="734" Height="622">
 
-                <!--<ScrollViewer Grid.Row="1">-->
 
-                <StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Horizontal">
+                -->
+            <!--<StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Vertical">
+                    <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                    <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                    <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                    <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                    <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                    <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                    <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+                </StackPanel>-->
+
+            <!--<ScrollViewer Grid.Row="1">-->
+
+            <!--<StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Horizontal">
 
                     <StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Vertical">
                     <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
@@ -102,8 +149,9 @@
                         <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
                     </StackPanel>
 
-                </StackPanel>
-        </ScrollViewer>
+                </StackPanel>-->
+            <!--
+            </ScrollViewer>-->
         </StackPanel>
     </Grid>
 </Page>
