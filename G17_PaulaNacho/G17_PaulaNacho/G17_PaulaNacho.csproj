@@ -134,11 +134,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Iconos\ajustes.png" />
+    <Content Include="Assets\Iconos\basketball.png" />
+    <Content Include="Assets\Iconos\dinero.png" />
+    <Content Include="Assets\Iconos\eyeCrossed.png" />
     <Content Include="Assets\Iconos\gamepad.png" />
+    <Content Include="Assets\Iconos\hamburguesa.png" />
     <Content Include="Assets\Iconos\historia.png" />
+    <Content Include="Assets\Iconos\incognito.png" />
     <Content Include="Assets\Iconos\lucha.png" />
     <Content Include="Assets\Iconos\mazo.png" />
+    <Content Include="Assets\Iconos\objetivo.png" />
+    <Content Include="Assets\Iconos\pata.png" />
     <Content Include="Assets\Iconos\tienda.png" />
+    <Content Include="Assets\Iconos\tornillo.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

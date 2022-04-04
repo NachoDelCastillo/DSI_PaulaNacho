@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.Resources>
-        <Style TargetType="Button">
+        <!--<Style x:Key="Card" TargetType="Button">
             <Setter Property="BorderThickness" Value="5" />
             <Setter Property="Foreground" Value="Black" />
             <Setter Property="Height" Value="170"/>
@@ -17,6 +17,35 @@
             <Setter Property="CornerRadius" Value="8"/>
             <Setter Property="FontStyle" Value="Normal"/>
             <Setter Property="FontFamily" Value="TimesNewRoman"/>
+
+        </Style>-->
+
+        <Style x:Key="CardTemplate" TargetType="Button">
+
+            <Setter Property="BorderThickness" Value="5" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Height" Value="170"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="FontStyle" Value="Normal"/>
+            <Setter Property="FontFamily" Value="TimesNewRoman"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <StackPanel Orientation="Vertical" Spacing="2" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5">
+                            <Image Source="Assets/Iconos/incognito.png" Height="70" VerticalAlignment="Top"/>
+                            <StackPanel Orientation="Horizontal" Spacing="2" >
+                                <TextBlock FontSize="20" TextWrapping="Wrap" 
+                               Text="100" Width="59" Height="30" VerticalAlignment="Center" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                <Image Source="Assets/Iconos/dinero.png" Height="30"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Page.Resources>
 
@@ -50,16 +79,32 @@
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center"
                     Orientation="Vertical"
-                    Spacing="100"> 
+                    Spacing="100">
 
-                    <Button Background="Yellow" BorderBrush="YellowGreen">
+                    <!--<Button Background="Gray" BorderBrush="White" Style="{StaticResource CardTemplate}">
                         <StackPanel Orientation="Vertical" Spacing="2" >
-                            <Image Source="Assets/Iconos/incognito.png" Height="50" VerticalAlignment="Top"/>
-                            <TextBlock FontWeight="Bold" HorizontalAlignment="Center" Text="Historia"></TextBlock>
-                            <TextBlock FontSize="13" TextWrapping="Wrap" 
-                               Text="Embárcate en esta aventura para salvar el reino de Oniria"></TextBlock>
+                            <Image Source="Assets/Iconos/incognito.png" Height="70" VerticalAlignment="Top"/>
+                            <StackPanel Orientation="Horizontal" Spacing="2" >
+                                <TextBlock FontSize="20" TextWrapping="Wrap" 
+                               Text="100" Width="38" Height="30" VerticalAlignment="Center" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                <Image Source="Assets/Iconos/dinero.png" Height="30" VerticalAlignment="Top"/>
+                            </StackPanel>
                         </StackPanel>
-                    </Button>
+                    </Button>-->
+
+                    <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
+
+
+                    <!--<Button Background="Gray" BorderBrush="White" Style="{StaticResource Card}">
+                        <StackPanel Orientation="Vertical" Spacing="2" >
+                            <Image Source="Assets/Iconos/incognito.png" Height="70" VerticalAlignment="Top"/>
+                            <StackPanel Orientation="Horizontal" Spacing="2" >
+                                <TextBlock FontSize="20" TextWrapping="Wrap" 
+                               Text="100" Width="38" Height="30" VerticalAlignment="Center" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                <Image Source="Assets/Iconos/dinero.png" Height="30" VerticalAlignment="Top"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Button>-->
 
                 </StackPanel>
                 <StackPanel Grid.Row="1"
