@@ -32,8 +32,16 @@
                     HorizontalAlignment="Center" 
                     Orientation="Horizontal"
                     Spacing="100">
-            <Button Background="Yellow" BorderBrush="YellowGreen"/>
-            <Button Background="DeepSkyBlue" BorderBrush="DarkSlateBlue" />
+
+            <Button Background="Yellow" BorderBrush="YellowGreen">
+                <Image Source="Assets/Iconos/historia.png" Height="40"/>
+            </Button>
+
+            <Button Background="DeepSkyBlue" BorderBrush="DarkSlateBlue">
+                <Image Source="Assets/Iconos/lucha.png" Height="40"/>
+
+            </Button>
+            
         </StackPanel>
         <Image Source="Assets/Iconos/ajustes.png" HorizontalAlignment="Right" Margin="5"/>
     </Grid>
