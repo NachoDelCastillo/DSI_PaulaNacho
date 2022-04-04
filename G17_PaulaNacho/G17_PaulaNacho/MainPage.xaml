@@ -12,7 +12,7 @@
             <Setter Property="BorderThickness" Value="5" />
             <Setter Property="Foreground" Value="Black" />
             <Setter Property="Height" Value="170"/>
-            <Setter Property="Width" Value="120"/>
+            <Setter Property="Width" Value="150"/>
             <Setter Property="CornerRadius" Value="8"/>
             <Setter Property="FontStyle" Value="Normal"/>
             <Setter Property="FontFamily" Value="TimesNewRoman"/>
@@ -52,5 +52,25 @@
         </StackPanel>
         
         <Image Source="Assets/Iconos/ajustes.png" HorizontalAlignment="Right" Margin="5"/>
+        <StackPanel Grid.Row="2" 
+                    Orientation="Horizontal" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center"
+                    Spacing="100">
+            <Image Source="Assets/Iconos/tienda.png" HorizontalAlignment="Right" Margin="5" Height="45" />
+            <Image Source="Assets/Iconos/gamepad.png" HorizontalAlignment="Right" Margin="5"/>
+            <Image Source="Assets/Iconos/mazo.png" HorizontalAlignment="Right" Margin="5" Height="45"/>
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock x:Name="dineroTot"
+                   Text="1200"
+                   Margin="5"
+                   FontWeight="Bold">
+            </TextBlock>
+            <Image Source="Assets/Iconos/dinero.png"  Margin="5" />
+
+        </StackPanel>
+        
     </Grid>
 </Page>
