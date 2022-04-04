@@ -116,6 +116,9 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Ajustes.xaml.cs">
+      <DependentUpon>Ajustes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -153,11 +156,14 @@
     <Content Include="Assets\Iconos\lighting.png" />
     <Content Include="Assets\Iconos\lucha.png" />
     <Content Include="Assets\Iconos\mazo.png" />
+    <Content Include="Assets\Iconos\mundo.png" />
+    <Content Include="Assets\Iconos\music.png" />
     <Content Include="Assets\Iconos\objetivo.png" />
     <Content Include="Assets\Iconos\pata.png" />
     <Content Include="Assets\Iconos\sword.png" />
     <Content Include="Assets\Iconos\tienda.png" />
     <Content Include="Assets\Iconos\tornillo.png" />
+    <Content Include="Assets\Iconos\volumen.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -172,6 +178,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Ajustes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CreadorMazo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
