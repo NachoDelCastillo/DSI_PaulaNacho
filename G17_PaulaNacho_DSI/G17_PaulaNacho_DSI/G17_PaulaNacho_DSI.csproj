@@ -152,6 +152,7 @@
     <Content Include="Assets\Iconos\mazo.png" />
     <Content Include="Assets\Iconos\objetivo.png" />
     <Content Include="Assets\Iconos\pata.png" />
+    <Content Include="Assets\Iconos\sword.png" />
     <Content Include="Assets\Iconos\tienda.png" />
     <Content Include="Assets\Iconos\tornillo.png" />
     <Content Include="Properties\Default.rd.xml" />

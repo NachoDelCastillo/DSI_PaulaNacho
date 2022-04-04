@@ -55,15 +55,15 @@
         <Image Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png"></Image>
 
         <TextBlock Text="ANCIENT CARDS" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="23" FontWeight="Bold" Grid.Row="1"></TextBlock>
-
+ 
         <StackPanel Grid.Row="3" 
                     Orientation="Horizontal" 
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center"
                     Spacing="100">
-            <Image Source="Assets/Iconos/tienda.png" HorizontalAlignment="Right" Margin="5" Height="30" />
+            <Image Source="Assets/Iconos/tienda.png" HorizontalAlignment="Right" Margin="5" Height="80" />
             <Image Source="Assets/Iconos/gamepad.png" HorizontalAlignment="Right" Margin="5"/>
-            <Image Source="Assets/Iconos/mazo.png" HorizontalAlignment="Right" Margin="5" Height="30"/>
+            <Image Source="Assets/Iconos/mazo.png" HorizontalAlignment="Right" Margin="5" Height="80"/>
 
         </StackPanel>
         <StackPanel Orientation="Horizontal">
