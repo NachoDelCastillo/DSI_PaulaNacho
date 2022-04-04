@@ -1,7 +1,7 @@
 ﻿<Application
-    x:Class="G17_PaulaNacho.App"
+    x:Class="G17_PaulaNacho_DSI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:G17_PaulaNacho">
+    xmlns:local="using:G17_PaulaNacho_DSI">
 
 </Application>

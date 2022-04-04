@@ -7,14 +7,14 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="c85e16af-ca2c-40e1-9983-305b46be9041"
+    Name="77a47874-1e38-4b97-80ee-4122e8f61b1f"
     Publisher="CN=nacho"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="c85e16af-ca2c-40e1-9983-305b46be9041" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="77a47874-1e38-4b97-80ee-4122e8f61b1f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>G17_PaulaNacho</DisplayName>
+    <DisplayName>G17_PaulaNacho_DSI</DisplayName>
     <PublisherDisplayName>nacho</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="G17_PaulaNacho.App">
+      EntryPoint="G17_PaulaNacho_DSI.App">
       <uap:VisualElements
-        DisplayName="G17_PaulaNacho"
+        DisplayName="G17_PaulaNacho_DSI"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="G17_PaulaNacho"
+        Description="G17_PaulaNacho_DSI"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
