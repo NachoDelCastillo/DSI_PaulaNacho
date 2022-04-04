@@ -33,11 +33,8 @@
                     Orientation="Horizontal"
                     Spacing="100">
             <Button Background="Yellow" BorderBrush="YellowGreen"/>
-
             <Button Background="DeepSkyBlue" BorderBrush="DarkSlateBlue" />
-
-
-
         </StackPanel>
+        <Image Source="Assets/Iconos/ajustes.png" HorizontalAlignment="Right" Margin="5"/>
     </Grid>
 </Page>
