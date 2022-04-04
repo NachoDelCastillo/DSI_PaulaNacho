@@ -122,6 +122,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Combate.xaml.cs">
+      <DependentUpon>Combate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CreadorMazo.xaml.cs">
       <DependentUpon>CreadorMazo.xaml</DependentUpon>
     </Compile>
@@ -139,6 +142,12 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Combate\bat.png" />
+    <Content Include="Assets\Combate\dungeon.jpg" />
+    <Content Include="Assets\Combate\heath.png" />
+    <Content Include="Assets\Combate\mago.png" />
+    <Content Include="Assets\Combate\ogro.png" />
+    <Content Include="Assets\Combate\shield.png" />
     <Content Include="Assets\Iconos\ajustes.png" />
     <Content Include="Assets\Iconos\banner.png" />
     <Content Include="Assets\Iconos\basketball.png" />
@@ -179,6 +188,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Ajustes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Combate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

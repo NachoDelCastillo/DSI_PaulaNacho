@@ -1,0 +1,66 @@
+﻿<Page
+    x:Class="G17_PaulaNacho_DSI.Combate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:G17_PaulaNacho_DSI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="12*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Background="MidnightBlue" Grid.ColumnSpan="3"/>
+
+        <Image Source="Assets/Iconos/ajustes.png"  Grid.Column="2" HorizontalAlignment="Right" Margin="10,10,15,10"/>
+        <Image Source="Assets/Combate/dungeon.jpg" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Stretch="Fill" />
+
+        <StackPanel Grid.Row="1" Orientation="Vertical" VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="10,10,10,0" >
+            <Image  Source="Assets/Combate/mago.png"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80">
+                <Image  Source="Assets/Combate/shield.png" />
+                <Image  Source="Assets/Combate/heath.png" Width="200"/>
+
+            </StackPanel>
+            <Image Source="Assets/Combate/sword.png" Height="28"/>
+        </StackPanel>
+        
+        <TextBlock Grid.Row="1" Text="4" FontWeight="Bold" FontSize="30" Margin="81,473,268,50" />
+        <TextBlock Grid.Row="1" Text="+3" FontWeight="Bold" FontSize="25" Margin="210,533,127,332" Grid.RowSpan="2" />
+        <TextBlock Grid.Row="1" Text="24/30" FontWeight="Bold" FontSize="30" Margin="187,485,100,35" />
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" >
+            <Image Source="Assets/Combate/ogro.png" Height="450"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80">
+                <Image  Source="Assets/Combate/shield.png" />
+                <Image  Source="Assets/Combate/heath.png" Width="200"/>
+            </StackPanel>
+        </StackPanel>
+        <TextBlock Grid.Row="1" Text="4" FontWeight="Bold" FontSize="30" Margin="266,486,460,35" Grid.Column="1"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="24/30" FontWeight="Bold" FontSize="30" Margin="376,486,286,35" />
+
+
+        <StackPanel Grid.Row="1" Grid.Column="3" Orientation="Vertical" VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="10" >
+            <Image Source="Assets/Combate/bat.png" Height="400"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80">
+                <Image  Source="Assets/Combate/shield.png" />
+                <Image  Source="Assets/Combate/heath.png" Width="200"/>
+
+            </StackPanel>
+            <Image Source="Assets/Combate/hielo.png" Height="35"/>
+        </StackPanel>
+        <TextBlock Grid.Row="1" Text="4" FontWeight="Bold" FontSize="30" Margin="78,445,270,73" Grid.Column="2" RenderTransformOrigin="2.002,0.551"/>
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="24/30" FontWeight="Bold" FontSize="30" Margin="187,445,83,85"  />
+
+    </Grid>
+</Page>
