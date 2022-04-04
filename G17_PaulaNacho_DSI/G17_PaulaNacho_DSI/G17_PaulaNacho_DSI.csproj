@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Combate\bat.png" />
+    <Content Include="Assets\Combate\carta.png" />
     <Content Include="Assets\Combate\dungeon.jpg" />
     <Content Include="Assets\Combate\espada.png" />
     <Content Include="Assets\Combate\heath.png" />

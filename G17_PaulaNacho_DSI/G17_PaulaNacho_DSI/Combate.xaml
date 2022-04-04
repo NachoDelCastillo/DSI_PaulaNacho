@@ -10,9 +10,8 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="12*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="15*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -22,45 +21,59 @@
 
         <Border Background="MidnightBlue" Grid.ColumnSpan="3"/>
 
-        <Image Source="Assets/Iconos/ajustes.png"  Grid.Column="2" HorizontalAlignment="Right" Margin="10,10,15,10"/>
-        <Image Source="Assets/Combate/dungeon.jpg" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Stretch="Fill" />
+        <Image Source="Assets/Combate/dungeon.jpg"  Grid.ColumnSpan="3" Grid.RowSpan="2" Stretch="Fill" />
+        <Image Source="Assets/Iconos/ajustes.png"  Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Top" Height="40" Margin="10,10,15,10"/>
 
-        <StackPanel Grid.Row="1" Orientation="Vertical" VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="10,10,10,0" >
+        <StackPanel  Orientation="Vertical" VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="10,10,10,0" >
             <Image  Source="Assets/Combate/mago.png"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80">
-                <Image  Source="Assets/Combate/shield.png" />
-                <Image  Source="Assets/Combate/heath.png" Width="200"/>
+                <Grid>
+                    <Image  Source="Assets/Combate/shield.png" />
+                    <TextBlock Text="4" FontWeight="Bold" FontSize="30" Margin="31,10,-31,-10"/>
+                </Grid>
+                <Grid>
+                    <Image  Source="Assets/Combate/heath.png" Width="200"/>
+                    <TextBlock Text="24/30" FontWeight="Bold" FontSize="30" Margin="59,20,-59,-20"  />
+
+                </Grid>
+                <Image Source="Assets/Combate/hielo.png" Height="35"/>
 
             </StackPanel>
-            <Image Source="Assets/Combate/sword.png" Height="28"/>
-        </StackPanel>
-        
-        <TextBlock Grid.Row="1" Text="4" FontWeight="Bold" FontSize="30" Margin="81,473,268,50" />
-        <TextBlock Grid.Row="1" Text="+3" FontWeight="Bold" FontSize="25" Margin="210,533,127,332" Grid.RowSpan="2" />
-        <TextBlock Grid.Row="1" Text="24/30" FontWeight="Bold" FontSize="30" Margin="187,485,100,35" />
 
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" >
+        </StackPanel>
+
+        <StackPanel  Grid.Column="1" Orientation="Vertical"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" >
             <Image Source="Assets/Combate/ogro.png" Height="450"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80">
-                <Image  Source="Assets/Combate/shield.png" />
-                <Image  Source="Assets/Combate/heath.png" Width="200"/>
+                <Grid>
+                    <Image  Source="Assets/Combate/shield.png" />
+                    <TextBlock Text="4" FontWeight="Bold" FontSize="30" Margin="31,10,-31,-10"/>
+                </Grid>
+                <Grid>
+                    <Image  Source="Assets/Combate/heath.png" Width="200"/>
+                    <TextBlock Text="24/30" FontWeight="Bold" FontSize="30" Margin="59,20,-59,-20"  />
+
+                </Grid>
             </StackPanel>
         </StackPanel>
-        <TextBlock Grid.Row="1" Text="4" FontWeight="Bold" FontSize="30" Margin="266,486,460,35" Grid.Column="1"/>
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="24/30" FontWeight="Bold" FontSize="30" Margin="376,486,286,35" />
+        <TextBlock  Text="4" FontWeight="Bold" FontSize="30" Margin="370,576,563,138" Grid.Column="1"/>
 
 
-        <StackPanel Grid.Row="1" Grid.Column="3" Orientation="Vertical" VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="10" >
+        <StackPanel  Grid.Column="3" Orientation="Vertical" VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="10" >
             <Image Source="Assets/Combate/bat.png" Height="400"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80">
-                <Image  Source="Assets/Combate/shield.png" />
-                <Image  Source="Assets/Combate/heath.png" Width="200"/>
+                <Grid>
+                    <Image  Source="Assets/Combate/shield.png" />
+                    <TextBlock Text="4" FontWeight="Bold" FontSize="30" Margin="31,10,-31,-10"/>
+                </Grid>
+                <Grid>
+                    <Image  Source="Assets/Combate/heath.png" Width="200"/>
+                    <TextBlock Text="24/30" FontWeight="Bold" FontSize="30" Margin="59,20,-59,-20"  />
 
+                </Grid>
+                <Image Source="Assets/Combate/hielo.png" Height="35"/>
             </StackPanel>
-            <Image Source="Assets/Combate/hielo.png" Height="35"/>
         </StackPanel>
-        <TextBlock Grid.Row="1" Text="4" FontWeight="Bold" FontSize="30" Margin="78,445,270,73" Grid.Column="2" RenderTransformOrigin="2.002,0.551"/>
-        <TextBlock Grid.Row="1" Grid.Column="2" Text="24/30" FontWeight="Bold" FontSize="30" Margin="187,445,83,85"  />
 
         <Border BorderThickness="10" Grid.Row="3" CornerRadius="20" BorderBrush="Black" Background="WhiteSmoke" Height="150" Margin="15">
             <StackPanel Orientation="Horizontal" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -74,9 +87,9 @@
                 HorizontalAlignment="Center" Height="100" Width="200" 
                 Background="Tomato" FontSize="30" FontWeight="Bold" 
                 CornerRadius="8" Content="Fin de turno">
-            
+
         </Button>
-        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1" Margin="5">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" Margin="5">
             <Image Source="Assets/Combate/carta.png" Height="300"/>
             <Image Source="Assets/Combate/carta.png" Height="300"/>
             <Image Source="Assets/Combate/carta.png" Height="300"/>
