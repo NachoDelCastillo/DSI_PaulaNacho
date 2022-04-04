@@ -62,5 +62,13 @@
         <TextBlock Grid.Row="1" Text="4" FontWeight="Bold" FontSize="30" Margin="78,445,270,73" Grid.Column="2" RenderTransformOrigin="2.002,0.551"/>
         <TextBlock Grid.Row="1" Grid.Column="2" Text="24/30" FontWeight="Bold" FontSize="30" Margin="187,445,83,85"  />
 
+        <Border BorderThickness="10" Grid.Row="3" CornerRadius="20" BorderBrush="Black" Background="WhiteSmoke" Height="150" Margin="15">
+            <StackPanel Orientation="Horizontal" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Image Source="Assets/Iconos/lighting.png"/>
+                <Image Source="Assets/Iconos/lighting.png"/>
+                <Image Source="Assets/Iconos/lighting.png"/>
+            </StackPanel>
+
+        </Border>
     </Grid>
 </Page>
