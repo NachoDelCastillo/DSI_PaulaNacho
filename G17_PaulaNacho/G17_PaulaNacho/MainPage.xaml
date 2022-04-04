@@ -49,7 +49,7 @@
             </Button>
         </StackPanel>
         
-        <Image Source="Assets/Iconos/ajustes.png" HorizontalAlignment="Right" Margin="5"/>
+        <Image Source="Assets/Iconos/ajustes.png" HorizontalAlignment="Right" Margin="5,5,7,5"/>
         <StackPanel Grid.Row="2" 
                     Orientation="Horizontal" 
                     VerticalAlignment="Center" 
@@ -62,8 +62,9 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <TextBlock x:Name="dineroTot"
+                       FontSize="18"
                    Text="1200"
-                   Margin="5"
+                   Margin="10,5,5,5"
                    FontWeight="Bold">
             </TextBlock>
             <Image Source="Assets/Iconos/dinero.png"  Margin="5" />
