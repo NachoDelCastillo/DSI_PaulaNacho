@@ -144,10 +144,13 @@
   <ItemGroup>
     <Content Include="Assets\Combate\bat.png" />
     <Content Include="Assets\Combate\dungeon.jpg" />
+    <Content Include="Assets\Combate\espada.png" />
     <Content Include="Assets\Combate\heath.png" />
+    <Content Include="Assets\Combate\hielo.png" />
     <Content Include="Assets\Combate\mago.png" />
     <Content Include="Assets\Combate\ogro.png" />
     <Content Include="Assets\Combate\shield.png" />
+    <Content Include="Assets\Combate\sword.png" />
     <Content Include="Assets\Iconos\ajustes.png" />
     <Content Include="Assets\Iconos\banner.png" />
     <Content Include="Assets\Iconos\basketball.png" />
