@@ -29,14 +29,14 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80">
                 <Grid>
                     <Image  Source="Assets/Combate/shield.png" />
-                    <TextBlock Text="4" FontWeight="Bold" FontSize="30" Margin="31,10,-31,-10"/>
+                    <TextBlock Text="4" FontWeight="Bold" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Grid>
                 <Grid>
-                    <Image  Source="Assets/Combate/heath.png" Width="200"/>
-                    <TextBlock Text="24/30" FontWeight="Bold" FontSize="30" Margin="59,20,-59,-20"  />
+                    <ProgressBar Maximum="30" Value="24" Background="Black" Foreground="Red"  VerticalAlignment="Center"/>
+                    <TextBlock Text="24/30" FontWeight="Bold" FontSize="30" Margin="10,14,13,8" VerticalAlignment="Center" HorizontalAlignment="Center" />
 
                 </Grid>
-                <Image Source="Assets/Combate/hielo.png" Height="35"/>
+                <Image Source="Assets/Combate/hielo.png" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
             </StackPanel>
 
@@ -47,11 +47,11 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80">
                 <Grid>
                     <Image  Source="Assets/Combate/shield.png" />
-                    <TextBlock Text="4" FontWeight="Bold" FontSize="30" Margin="31,10,-31,-10"/>
+                    <TextBlock Text="4" FontWeight="Bold" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Grid>
                 <Grid>
-                    <Image  Source="Assets/Combate/heath.png" Width="200"/>
-                    <TextBlock Text="24/30" FontWeight="Bold" FontSize="30" Margin="59,20,-59,-20"  />
+                    <ProgressBar Maximum="30" Value="24" Background="Black" Foreground="Red"  VerticalAlignment="Center"/>
+                    <TextBlock Text="24/30" FontWeight="Bold" FontSize="30" Margin="10,14,13,8" VerticalAlignment="Center" HorizontalAlignment="Center" />
 
                 </Grid>
             </StackPanel>
@@ -64,22 +64,24 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80">
                 <Grid>
                     <Image  Source="Assets/Combate/shield.png" />
-                    <TextBlock Text="4" FontWeight="Bold" FontSize="30" Margin="31,10,-31,-10"/>
+                    <TextBlock Text="4" FontWeight="Bold" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Grid>
                 <Grid>
-                    <Image  Source="Assets/Combate/heath.png" Width="200"/>
-                    <TextBlock Text="24/30" FontWeight="Bold" FontSize="30" Margin="59,20,-59,-20"  />
+                    <ProgressBar Maximum="30" Value="24" Background="Black" Foreground="Red"  VerticalAlignment="Center"/>
+                    <TextBlock Text="24/30" FontWeight="Bold" FontSize="30" Margin="10,14,13,8" VerticalAlignment="Center" HorizontalAlignment="Center" />
 
                 </Grid>
-                <Image Source="Assets/Combate/hielo.png" Height="35"/>
+                <Image Source="Assets/Combate/hielo.png" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </StackPanel>
+
         </StackPanel>
 
-        <Border BorderThickness="10" Grid.Row="3" CornerRadius="20" BorderBrush="Black" Background="WhiteSmoke" Height="150" Margin="15">
+        <Border BorderThickness="10" Grid.Row="3" CornerRadius="20" BorderBrush="Black" Background="WhiteSmoke" 
+                Height="150" Margin="15" VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Image Source="Assets/Iconos/lighting.png"/>
-                <Image Source="Assets/Iconos/lighting.png"/>
-                <Image Source="Assets/Iconos/lighting.png"/>
+                <Image Source="Assets/Iconos/lighting.png" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Image Source="Assets/Iconos/lighting.png" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Image Source="Assets/Iconos/lighting.png" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </StackPanel>
 
         </Border>
@@ -89,11 +91,11 @@
                 CornerRadius="8" Content="Fin de turno">
 
         </Button>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" Margin="5">
-            <Image Source="Assets/Combate/carta.png" Height="300"/>
-            <Image Source="Assets/Combate/carta.png" Height="300"/>
-            <Image Source="Assets/Combate/carta.png" Height="300"/>
-            <Image Source="Assets/Combate/carta.png" Height="300"/>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" Margin="5">
+            <Image Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Image Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Image Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Image Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </StackPanel>
     </Grid>
 </Page>
