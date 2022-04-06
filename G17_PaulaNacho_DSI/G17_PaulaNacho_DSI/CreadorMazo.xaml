@@ -33,13 +33,13 @@
             <TextBlock Text="CREADOR DE MAZO" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="40" FontWeight="Bold" Margin="559,0,0,0"/>
         </Grid>
 
-        
+
         <!--AJUSTES-->
         <Button Click="Go_Settings"
             HorizontalAlignment ="Right" VerticalAlignment="Center" >
             <Image Source="Assets/Iconos/ajustes.png" />
         </Button>
-        
+
         <!--DINERO-->
         <StackPanel Orientation="Horizontal">
             <TextBlock x:Name="dineroTot"
@@ -53,15 +53,16 @@
             <Image Source="Assets/Iconos/dinero.png"  Margin="15" />
         </StackPanel>
 
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" 
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"  
                     Orientation="Vertical" Grid.Row="2">
 
-            <StackPanel  Orientation="Horizontal">
+            <StackPanel  Orientation="Horizontal"> 
 
-                <StackPanel Orientation="Vertical" Background="LimeGreen"
-                            Height="324" Width="640">
+                <StackPanel Orientation="Vertical" Background="LightGreen" 
+                            BorderBrush="DarkGreen" CornerRadius="8" BorderThickness="5"
+                            Height="446" Width="640">
 
-                    <GridView ItemsSource="12345678" Width="656" Height="536">
+                    <GridView ItemsSource="12345678" Width="656" Height="328">
                         <GridView.ItemTemplate>
                             <DataTemplate>
                                 <Button  Margin="20" Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5">
@@ -69,7 +70,7 @@
                                         <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top"/>
                                         <StackPanel Orientation="Horizontal" Spacing="2" >
                                             <TextBlock FontSize="20" TextWrapping="Wrap" 
-                               Text="100" Width="59" Height="30" VerticalAlignment="Center" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                            Text="100" Width="59" Height="30" VerticalAlignment="Center" TextAlignment="Center" Margin="0,0,0,-1"/>
                                             <Image Source="Assets/Iconos/dinero.png" Height="30"/>
                                         </StackPanel>
                                     </StackPanel>
@@ -77,6 +78,12 @@
                             </DataTemplate>
                         </GridView.ItemTemplate>
                     </GridView>
+
+                    <!--TITULO DE ZONA-->
+                    <Grid Grid.Row="1">
+                        <Image Width="584" VerticalAlignment="Top" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png" Height="106"/>
+                        <TextBlock Text="MAZO ACTUAL" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" SelectionChanged="TextBlock_SelectionChanged"/>
+                    </Grid>
                 </StackPanel>
 
                 <GridView ItemsSource="123456789ABDCDEFGHIJKLMNOPQRSTU" Width="656" Height="536">

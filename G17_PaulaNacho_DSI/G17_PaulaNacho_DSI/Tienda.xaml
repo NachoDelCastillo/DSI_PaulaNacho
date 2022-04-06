@@ -36,7 +36,7 @@
         </Button>
 
         <!--DINERO-->
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal"> 
             <TextBlock x:Name="dineroTot"
                        FontSize="32"
                        Foreground="White"

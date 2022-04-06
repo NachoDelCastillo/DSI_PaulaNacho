@@ -42,5 +42,10 @@ namespace G17_PaulaNacho_DSI
         {
             Frame.Navigate(typeof(Ajustes));
         }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
