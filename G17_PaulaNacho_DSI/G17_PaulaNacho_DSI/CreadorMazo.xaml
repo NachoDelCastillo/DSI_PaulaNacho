@@ -8,126 +8,113 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Page.Resources>
-
-        <Style x:Key="StackPanel_Template" TargetType="StackPanel">
-            <Setter Property="Grid.Row" Value="1"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="Spacing" Value="20"/>
-        </Style>
-
-        <Style x:Key="CardTemplate" TargetType="Button">
-
-            <Setter Property="BorderThickness" Value="5" />
-            <Setter Property="Foreground" Value="Black" />
-            <!--<Setter Property="Height" Value="170"/>-->
-            <!--<Setter Property="Width" Value="120"/>-->
-            <!--<Setter Property="CornerRadius" Value="8"/>-->
-            <Setter Property="FontStyle" Value="Normal"/>
-            <!--<Setter Property="FontFamily" Value="TimesNewRoman"/>
-            <Setter Property="Background" Value="White"/>
-            <Setter Property="BorderBrush" Value="Black"/>-->
-
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <StackPanel Orientation="Vertical" Spacing="2" Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5">
-                            <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top"/>
-                        </StackPanel>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Page.Resources>
-
     <Grid>
+        <!--DIVIDIR PANTALLA CON COLORES-->
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="7*"/>
             <RowDefinition Height="20*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
         <Border Background="MidnightBlue"/>
-        <Border Grid.Row="1" Background="#2f5cb6"/>
-        <Border Grid.Row="2" Background="DodgerBlue"/>
+        <Border Grid.Row="1" Grid.RowSpan="2" Background="#2f5cb6"/>
+        <Border Grid.Row="3" Background="DodgerBlue"/>
+        <Button HorizontalAlignment ="Right" VerticalAlignment="Center" >
+            <Image Source="Assets/Iconos/ajustes.png" />
+        </Button>
 
+        <!--TITULO DE ZONA-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1453*"/>
+                <ColumnDefinition Width="47*"/>
+            </Grid.ColumnDefinitions>
+            <Image Width="800" VerticalAlignment="Center" HorizontalAlignment="Left" Source="Assets/Iconos/banner.png" Margin="350,0,0,0"/>
+            <TextBlock Text="CREADOR DE MAZO" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="40" FontWeight="Bold" Margin="559,0,0,0"/>
+        </Grid>
 
-        <Image Source="Assets/Iconos/ajustes.png" HorizontalAlignment="Right" Margin="5,5,7,5"/>
-
-        <StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Vertical">
-
-            <Image Width="800" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png"></Image>
-
-            <TextBlock Text="CREADOR DE MAZO" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" Grid.Row="1"/>
-
-            <StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Horizontal">
-
-
-
-                <StackPanel Style="{StaticResource StackPanel_Template}"
-                            Orientation="Vertical" Background="LimeGreen" 
-                            Height="342" Width="536" >
-
-                    <StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Horizontal">
-                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                    </StackPanel>
-                    <StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Horizontal">
-                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                        <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                    </StackPanel>
-                </StackPanel>
-
-                <ScrollViewer ZoomMode="Enabled" MaxZoomFactor="10"
-              HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Visible"
-              Height="378" Width="643">
-
-                    <StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Vertical">
-
-                        <StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Horizontal">
-                            <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                            <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                            <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                            <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                        </StackPanel>
-                        <StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Horizontal">
-                            <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                            <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                            <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                            <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                        </StackPanel>
-                        <StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Horizontal">
-                            <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                            <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                            <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                            <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                        </StackPanel>
-                        <StackPanel Style="{StaticResource StackPanel_Template}" Orientation="Horizontal">
-                            <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                            <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                            <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                            <Button  Style="{StaticResource CardTemplate}" Height="134" Width="109"/>
-                        </StackPanel>
-                    </StackPanel>
-                </ScrollViewer>
-
-            </StackPanel>
+        
+        <!--AJUSTES-->
+        <Button Click="Go_Settings"
+            HorizontalAlignment ="Right" VerticalAlignment="Center" >
+            <Image Source="Assets/Iconos/ajustes.png" />
+        </Button>
+        
+        <!--DINERO-->
+        <StackPanel Orientation="Horizontal">
+            <TextBlock x:Name="dineroTot"
+                       FontSize="32"
+                       Foreground="White"
+                       TextAlignment="Center"
+                       Text="1200"
+                       Margin="10,5,5,5"
+                       FontWeight="Bold" Height="51">
+            </TextBlock>
+            <Image Source="Assets/Iconos/dinero.png"  Margin="15" />
         </StackPanel>
 
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    Orientation="Vertical" Grid.Row="2">
+
+            <StackPanel  Orientation="Horizontal">
+
+                <StackPanel Orientation="Vertical" Background="LimeGreen"
+                            Height="324" Width="640">
+
+                    <GridView ItemsSource="12345678" Width="656" Height="536">
+                        <GridView.ItemTemplate>
+                            <DataTemplate>
+                                <Button  Margin="20" Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5">
+                                    <StackPanel Orientation="Vertical" Spacing="2" >
+                                        <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top"/>
+                                        <StackPanel Orientation="Horizontal" Spacing="2" >
+                                            <TextBlock FontSize="20" TextWrapping="Wrap" 
+                               Text="100" Width="59" Height="30" VerticalAlignment="Center" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                            <Image Source="Assets/Iconos/dinero.png" Height="30"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Button>
+                            </DataTemplate>
+                        </GridView.ItemTemplate>
+                    </GridView>
+                </StackPanel>
+
+                <GridView ItemsSource="123456789ABDCDEFGHIJKLMNOPQRSTU" Width="656" Height="536">
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <Button  Margin="20" Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5">
+                                <StackPanel Orientation="Vertical" Spacing="2" >
+                                    <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top"/>
+                                    <StackPanel Orientation="Horizontal" Spacing="2" >
+                                        <TextBlock FontSize="20" TextWrapping="Wrap" 
+                               Text="100" Width="59" Height="30" VerticalAlignment="Center" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                        <Image Source="Assets/Iconos/dinero.png" Height="30"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Button>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </StackPanel>
+
+        </StackPanel>
+
+        <!--SELECTOR MENU-->
         <StackPanel Grid.Row="3" 
                     Orientation="Horizontal" 
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center"
                     Spacing="100">
-            <Image Source="Assets/Iconos/tienda.png" HorizontalAlignment="Right" Margin="5" Height="80" />
-            <Image Source="Assets/Iconos/gamepad.png" HorizontalAlignment="Right" Margin="5"/>
-            <Image Source="Assets/Iconos/mazo.png" HorizontalAlignment="Right" Margin="5" Height="80"/>
+            <Button Click="Go_Shop">
+                <Image Source="Assets/Iconos/tienda.png" HorizontalAlignment="Right" Margin="5" Height="60" />
+            </Button>
+            <Button Click="Go_SelectScreen">
+                <Image Source="Assets/Iconos/gamepad.png" HorizontalAlignment="Right" Margin="5" Height="60"/>
+            </Button>
+            <Button>
+                <Image Source="Assets/Iconos/mazo.png" HorizontalAlignment="Right" Margin="5"/>
+            </Button>
         </StackPanel>
-
     </Grid>
 </Page>
 

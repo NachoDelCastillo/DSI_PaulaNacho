@@ -26,5 +26,26 @@ namespace G17_PaulaNacho_DSI
         {
             this.InitializeComponent();
         }
+
+        private void Go_Shop(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Tienda));
+        }
+
+        private void Go_DeckCreator(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(CreadorMazo));
+        }
+
+        private void Go_Settings(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Ajustes));
+        }
+
+
+        private void StartBattleButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Combate));
+        }
     }
 }

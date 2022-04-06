@@ -35,7 +35,11 @@
         <StackPanel VerticalAlignment="Center" Grid.Row="1" Orientation="Vertical"
                     Spacing="50">
 
-            <Image Width="800" Source="Assets/Iconos/banner.png"/>
+            <!--TITULO DE ZONA-->
+            <Grid Grid.Row="1">
+                <Image Width="800" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png"/>
+                <TextBlock Text="AJUSTES" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold"/>
+            </Grid>
 
             <StackPanel HorizontalAlignment="Center" Grid.Row="1" Orientation="Horizontal" Spacing="300">
 
@@ -46,7 +50,7 @@
                     <StackPanel HorizontalAlignment="Center" Grid.Row="1" Orientation="Horizontal" Spacing="30">
                         <Image Width="60" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/volumen.png"/>
                         <Slider Maximum="10" Width="300" VerticalAlignment="Center" TickFrequency="10" />
-                    </StackPanel>
+                    </StackPanel> 
                     <StackPanel HorizontalAlignment="Center" Grid.Row="1" Orientation="Horizontal" Spacing="30">
                         <Image Width="60" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/music.png"/>
                         <Slider Maximum="10" Width="300" VerticalAlignment="Center" TickFrequency="10" />
@@ -80,15 +84,15 @@
                         CornerRadius ="8"
                         Spacing="30" Height="163" Width="827">
 
-                <Button>
+                <Button Click="goBackButtonClick">
                     <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
                                    Text="Volver"/>
                 </Button>
-                <Button>
+                <Button Click="goToMenu">
                     <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
                                    Text="Menu Principal"/>
                 </Button>
-                <Button>
+                <Button Click="ExitButtonClick">
                     <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
                                    Text="Salir del juego"/>
                 </Button>

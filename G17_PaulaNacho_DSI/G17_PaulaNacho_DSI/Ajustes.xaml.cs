@@ -26,5 +26,22 @@ namespace G17_PaulaNacho_DSI
         {
             this.InitializeComponent();
         }
+
+
+        private void goToMenu(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
+
+        private void goBackButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (Frame.CanGoBack)
+                Frame.GoBack();
+        }
+
+        private void ExitButtonClick(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
     }
 }
