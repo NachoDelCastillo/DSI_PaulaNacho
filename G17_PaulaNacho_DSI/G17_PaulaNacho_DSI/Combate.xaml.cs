@@ -26,5 +26,9 @@ namespace G17_PaulaNacho_DSI
         {
             this.InitializeComponent();
         }
+        private void Go_Settings(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Ajustes));
+        }
     }
 }

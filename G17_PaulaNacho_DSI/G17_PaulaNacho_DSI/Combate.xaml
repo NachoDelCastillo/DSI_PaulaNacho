@@ -22,7 +22,11 @@
         <Border Background="MidnightBlue" Grid.ColumnSpan="3"/>
 
         <Image Source="Assets/Combate/dungeon.jpg"  Grid.ColumnSpan="3" Grid.RowSpan="2" Stretch="Fill" />
-        <Image Source="Assets/Iconos/ajustes.png"  Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Top" Height="40" Margin="10,10,15,10"/>
+        
+        <Grid  Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Right">
+        <Image Source="Assets/Iconos/ajustes.png" Height="40" Margin="10,10,15,10"/>
+        <Button Click="Go_Settings" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+        </Grid>
 
         <StackPanel  Orientation="Vertical" VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="10,10,10,0" >
             <Image  Source="Assets/Combate/mago.png"/>
