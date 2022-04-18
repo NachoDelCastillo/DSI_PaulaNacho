@@ -30,5 +30,22 @@ namespace G17_PaulaNacho_DSI
         {
             Frame.Navigate(typeof(Ajustes));
         }
+
+        private void MagoImage_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            playerEstado.Visibility = Visibility.Visible;
+        }
+        private void BatImage_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            batEstado.Visibility = Visibility.Visible;
+        }
+        private void MagoImage_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            playerEstado.Visibility = Visibility.Collapsed;
+        }
+        private void BatImage_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            batEstado.Visibility = Visibility.Collapsed;
+        }
     }
 }
