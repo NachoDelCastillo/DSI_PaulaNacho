@@ -89,16 +89,18 @@
                 <GridView ItemsSource="123456789ABDCDEFGHIJKLMNOPQRSTU" Width="656" Height="536">
                     <GridView.ItemTemplate>
                         <DataTemplate>
-                            <Button  Margin="20" Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5">
-                                <StackPanel Orientation="Vertical" Spacing="2" >
-                                    <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top"/>
-                                    <StackPanel Orientation="Horizontal" Spacing="2" >
-                                        <TextBlock FontSize="20" TextWrapping="Wrap" 
+                            <ContentControl>
+                                <Button  Margin="20" Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5">
+                                    <StackPanel Orientation="Vertical" Spacing="2" >
+                                        <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top"/>
+                                        <StackPanel Orientation="Horizontal" Spacing="2" >
+                                            <TextBlock FontSize="20" TextWrapping="Wrap" 
                                Text="100" Width="59" Height="30" VerticalAlignment="Center" TextAlignment="Center" Margin="0,0,0,-1"/>
-                                        <Image Source="Assets/Iconos/dinero.png" Height="30"/>
+                                            <Image Source="Assets/Iconos/dinero.png" Height="30"/>
+                                        </StackPanel>
                                     </StackPanel>
-                                </StackPanel>
-                            </Button>
+                                </Button>
+                            </ContentControl>
                         </DataTemplate>
                     </GridView.ItemTemplate>
                 </GridView>
