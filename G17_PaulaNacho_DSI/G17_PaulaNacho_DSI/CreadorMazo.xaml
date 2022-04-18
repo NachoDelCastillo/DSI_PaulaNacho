@@ -53,28 +53,31 @@
             <Image Source="Assets/Iconos/dinero.png"  Margin="15" />
         </StackPanel>
 
+
+        <Canvas x:Name="MiCanvas" Grid.Row="2" DragOver="Drag_Over" AllowDrop="True"/>
+
+
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"  
                     Orientation="Vertical" Grid.Row="2">
 
-            <StackPanel  Orientation="Horizontal"> 
+            <StackPanel  Orientation="Horizontal">
 
                 <StackPanel Orientation="Vertical" Background="LightGreen" 
                             BorderBrush="DarkGreen" CornerRadius="8" BorderThickness="5"
                             Height="446" Width="640">
 
-                    <GridView ItemsSource="12345678" Width="656" Height="328">
+                    <GridView  x:Name="MiListView" ItemsSource="12345678" Width="656" Height="328"
+                              DragOver="Drag_Over" AllowDrop="True">
                         <GridView.ItemTemplate>
                             <DataTemplate>
-                                <Button  Margin="20" Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5">
-                                    <StackPanel Orientation="Vertical" Spacing="2" >
+                                <ContentControl  DragStarting="Drag_Starting" CanDrag="True">
+                                    <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
+                                                Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
                                         <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top"/>
-                                        <StackPanel Orientation="Horizontal" Spacing="2" >
-                                            <TextBlock FontSize="20" TextWrapping="Wrap" 
-                                            Text="100" Width="59" Height="30" VerticalAlignment="Center" TextAlignment="Center" Margin="0,0,0,-1"/>
-                                            <Image Source="Assets/Iconos/dinero.png" Height="30"/>
-                                        </StackPanel>
+                                        <TextBlock FontSize="16" TextWrapping="Wrap" 
+                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
                                     </StackPanel>
-                                </Button>
+                                </ContentControl>
                             </DataTemplate>
                         </GridView.ItemTemplate>
                     </GridView>
@@ -82,24 +85,21 @@
                     <!--TITULO DE ZONA-->
                     <Grid Grid.Row="1">
                         <Image Width="584" VerticalAlignment="Top" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png" Height="106"/>
-                        <TextBlock Text="MAZO ACTUAL" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" SelectionChanged="TextBlock_SelectionChanged"/>
+                        <TextBlock Text="MAZO ACTUAL" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"/>
                     </Grid>
                 </StackPanel>
 
-                <GridView ItemsSource="123456789ABDCDEFGHIJKLMNOPQRSTU" Width="656" Height="536">
+                <GridView x:Name="MiGridView" ItemsSource="123456789ABDCDEFGHIJKLMNOPQRSTU" Width="656" Height="440"
+                           DragOver="Drag_Over" AllowDrop="True" HorizontalAlignment="Center">
                     <GridView.ItemTemplate>
                         <DataTemplate>
-                            <ContentControl>
-                                <Button  Margin="20" Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5">
-                                    <StackPanel Orientation="Vertical" Spacing="2" >
-                                        <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top"/>
-                                        <StackPanel Orientation="Horizontal" Spacing="2" >
-                                            <TextBlock FontSize="20" TextWrapping="Wrap" 
-                               Text="100" Width="59" Height="30" VerticalAlignment="Center" TextAlignment="Center" Margin="0,0,0,-1"/>
-                                            <Image Source="Assets/Iconos/dinero.png" Height="30"/>
-                                        </StackPanel>
-                                    </StackPanel>
-                                </Button>
+                            <ContentControl  DragStarting="Drag_Starting" CanDrag="True">
+                                <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
+                                                Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
+                                    <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top"/>
+                                    <TextBlock FontSize="16" TextWrapping="Wrap" 
+                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                </StackPanel>
                             </ContentControl>
                         </DataTemplate>
                     </GridView.ItemTemplate>

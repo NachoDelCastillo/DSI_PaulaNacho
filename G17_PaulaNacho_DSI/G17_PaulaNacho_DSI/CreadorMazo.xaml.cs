@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.DataTransfer;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
+using Windows.UI.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,12 +25,20 @@ namespace G17_PaulaNacho_DSI
     /// </summary>
     public sealed partial class CreadorMazo : Page
     {
+        bool ClickPulsado = false;
+        CoreCursor CursorHand = null;
+        CoreCursor CursorPin = null;
+
         public CreadorMazo()
         {
             this.InitializeComponent();
+
+            CursorHand = new CoreCursor(CoreCursorType.Hand, 0);
+            CursorPin = new CoreCursor(CoreCursorType.Pin, 0);
         }
 
 
+        // Botones
         private void Go_Shop(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Tienda));
@@ -43,9 +54,49 @@ namespace G17_PaulaNacho_DSI
             Frame.Navigate(typeof(Ajustes));
         }
 
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
 
+        // Drag and Drop
+        private void Drag_Starting(UIElement sender, DragStartingEventArgs args)
+        {
+            ContentControl O = sender as ContentControl;
+            args.Data.SetText(O.Name);
+            args.Data.RequestedOperation = DataPackageOperation.Move;
+
+            O.PointerReleased += Pointer_Released;
+            O.PointerPressed += Pointer_Pressed;
+        }
+
+        private void Drag_Over(object sender, DragEventArgs e)
+        {
+            e.AcceptedOperation = DataPackageOperation.Move;
+        }
+
+        private async void Drop_Item(object sender, DragEventArgs e)
+        {
+            var Oname = await e.DataView.GetTextAsync();
+            ContentControl O = FindName(Oname.ToString()) as ContentControl;
+
+
+            //MiStack.Children.Remove(O);
+            //MiCanvas.Children.Add(O);
+            Point pos = e.GetPosition(MiCanvas);
+            O.CanDrag = false;
+            O.SetValue(Canvas.LeftProperty, pos.X - 75);
+            O.SetValue(Canvas.TopProperty, pos.Y - 90);
+
+            Window.Current.CoreWindow.PointerCursor = CursorPin;
+        }
+
+        private void Pointer_Pressed(object sender, PointerRoutedEventArgs e)
+        {
+            ClickPulsado = true;
+            Window.Current.CoreWindow.PointerCursor = CursorHand;
+        }
+
+        private void Pointer_Released(object sender, PointerRoutedEventArgs e)
+        {
+            ClickPulsado = false;
+            Window.Current.CoreWindow.PointerCursor = CursorPin;
         }
     }
 }
