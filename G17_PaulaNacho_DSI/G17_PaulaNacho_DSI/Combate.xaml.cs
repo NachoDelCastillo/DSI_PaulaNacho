@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.DataTransfer;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -30,5 +31,52 @@ namespace G17_PaulaNacho_DSI
         {
             Frame.Navigate(typeof(Ajustes));
         }
+
+        private void MagoImage_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            playerEstado.Visibility = Visibility.Visible;
+        }
+        private void BatImage_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            batEstado.Visibility = Visibility.Visible;
+        }
+        private void MagoImage_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            playerEstado.Visibility = Visibility.Collapsed;
+        }
+        private void BatImage_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            batEstado.Visibility = Visibility.Collapsed;
+        }
+
+        private void ContentControl_DragStarting(UIElement sender, DragStartingEventArgs args)
+        {
+            ContentControl O = sender as ContentControl;
+            args.Data.SetText(O.Name);
+            args.Data.RequestedOperation = DataPackageOperation.Copy;
+        }
+        private void MiZona_DragOver(object sender, DragEventArgs e)
+        {
+            e.AcceptedOperation = DataPackageOperation.Copy;
+        }
+
+        private async void MiZona_Drop(object sender, DragEventArgs e)
+        {
+            var Oname = await e.DataView.GetTextAsync();
+            ContentControl O = FindName(Oname.ToString()) as ContentControl;
+
+            if (MisCartas.Children.Count >= 1) 
+            {
+                MisCartas.Children.Remove(O);
+            }
+            
+            MiZona.Children.Add(O);
+            Point pos = e.GetPosition(MiZona);
+            //O.CanDrag = false;
+            O.SetValue(Grid.ColumnProperty, pos.X-50);
+            O.SetValue(Grid.RowProperty, pos.Y-50);
+
+        }
+
     }
 }
