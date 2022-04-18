@@ -32,7 +32,6 @@ namespace G17_PaulaNacho_DSI
             base.OnNavigatedTo(e);
 
             // Cambiar el numero de monedas al actual
-
             string currentMoney = (string)e.Parameter;
             // En el caso en el que se inicie la aplicacion por primera vez
             if (currentMoney == "")
