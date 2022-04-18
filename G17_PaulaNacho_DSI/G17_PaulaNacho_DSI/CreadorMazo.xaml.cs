@@ -37,16 +37,26 @@ namespace G17_PaulaNacho_DSI
             CursorPin = new CoreCursor(CoreCursorType.Pin, 0);
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            // Cambiar el numero de monedas al actual
+            Dinero.Text = (string)e.Parameter;
+        }
+
 
         // Botones
         private void Go_Shop(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Tienda));
+            string currentMoney = Dinero.Text;
+            Frame.Navigate(typeof(Tienda), currentMoney);
         }
 
         private void Go_SelectScreen(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
+            string currentMoney = Dinero.Text;
+            Frame.Navigate(typeof(MainPage), currentMoney);
         }
 
         private void Go_Settings(object sender, RoutedEventArgs e)
@@ -76,9 +86,6 @@ namespace G17_PaulaNacho_DSI
             var Oname = await e.DataView.GetTextAsync();
             ContentControl O = FindName(Oname.ToString()) as ContentControl;
 
-
-            //MiStack.Children.Remove(O);
-            //MiCanvas.Children.Add(O);
             Point pos = e.GetPosition(MiCanvas);
             O.CanDrag = false;
             O.SetValue(Canvas.LeftProperty, pos.X - 75);

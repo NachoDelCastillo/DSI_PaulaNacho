@@ -15,6 +15,10 @@
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="Spacing" Value="45"/>
         </Style>
+
+        <Style x:Key="itemValueText" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Green"/>
+        </Style>
     </Page.Resources>
 
     <Grid>
@@ -37,7 +41,7 @@
 
         <!--DINERO-->
         <StackPanel Orientation="Horizontal"> 
-            <TextBlock x:Name="dineroTot"
+            <TextBlock x:Name="Dinero"
                        FontSize="32"
                        Foreground="White"
                        TextAlignment="Center"
@@ -56,16 +60,16 @@
 
         
         <!--ZONA DE INTERES-->
-        <StackPanel Orientation="Vertical"
-                    Grid.Row="2">
-            <GridView ItemsSource="123456789ABDCDEFGHIJKLMNOPQRSTU" Width="976" Height="536">
+        <StackPanel Orientation="Vertical" Grid.Row="2">
+            <GridView  x:Name="gridview_" ItemsSource="123456789ABDCDEFGHIJKLMNOPQRSTU" Width="976" Height="536">
                 <GridView.ItemTemplate>
                     <DataTemplate>
-                        <Button  Margin="20" Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5">
+                        <Button x:Name="button__" Margin="20" Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
+                                 Click="ItemClick">
                             <StackPanel Orientation="Vertical" Spacing="2" > 
                                 <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top"/>
                                 <StackPanel Orientation="Horizontal" Spacing="2" >
-                                    <TextBlock FontSize="20" TextWrapping="Wrap" 
+                                    <TextBlock  Style="{StaticResource itemValueText}" FontSize="20" TextWrapping="Wrap" 
                                Text="100" Width="59" Height="30" VerticalAlignment="Center" TextAlignment="Center" Margin="0,0,0,-1"/>
                                     <Image Source="Assets/Iconos/dinero.png" Height="30"/>
                                 </StackPanel>

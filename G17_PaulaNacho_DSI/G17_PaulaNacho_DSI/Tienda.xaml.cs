@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -27,19 +28,42 @@ namespace G17_PaulaNacho_DSI
             this.InitializeComponent();
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            // Cambiar el numero de monedas al actual
+            Dinero.Text = (string)e.Parameter;
+        }
+
+        // Botones
         private void Go_SelectScreen(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
+            string currentMoney = Dinero.Text;
+            Frame.Navigate(typeof(MainPage), currentMoney);
         }
 
         private void Go_DeckCreator(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(CreadorMazo));
+            string currentMoney = Dinero.Text;
+            Frame.Navigate(typeof(CreadorMazo), currentMoney);
         }
 
         private void Go_Settings(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Ajustes));
+            string currentMoney = Dinero.Text;
+            Frame.Navigate(typeof(Ajustes), currentMoney);
+        }
+
+        private void ItemClick(object sender, RoutedEventArgs e)
+        {
+            // Restar dinero
+            int currentMoney = int.Parse(Dinero.Text);
+
+            if (currentMoney - 100 >= 0)
+            {
+                Dinero.Text = (currentMoney - 100).ToString();
+            }
         }
     }
 }

@@ -82,7 +82,7 @@
 
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <TextBlock x:Name="dineroTot"
+            <TextBlock x:Name="Dinero"
                        FontSize="32"
                        Foreground="White"
                        TextAlignment="Center"

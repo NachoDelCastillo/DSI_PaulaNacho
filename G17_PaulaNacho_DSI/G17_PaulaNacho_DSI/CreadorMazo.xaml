@@ -42,7 +42,7 @@
 
         <!--DINERO-->
         <StackPanel Orientation="Horizontal">
-            <TextBlock x:Name="dineroTot"
+            <TextBlock x:Name="Dinero"
                        FontSize="32"
                        Foreground="White"
                        TextAlignment="Center"
@@ -74,8 +74,8 @@
                                     <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
                                                 Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
                                         <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top"/>
-                                        <TextBlock FontSize="16" TextWrapping="Wrap" 
-                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                        <TextBlock FontSize="16" TextWrapping="Wrap"
+                                        Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
                                     </StackPanel>
                                 </ContentControl>
                             </DataTemplate>

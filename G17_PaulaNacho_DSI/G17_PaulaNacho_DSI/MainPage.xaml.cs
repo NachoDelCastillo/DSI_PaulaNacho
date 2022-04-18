@@ -27,14 +27,30 @@ namespace G17_PaulaNacho_DSI
             this.InitializeComponent();
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            // Cambiar el numero de monedas al actual
+
+            string currentMoney = (string)e.Parameter;
+            // En el caso en el que se inicie la aplicacion por primera vez
+            if (currentMoney == "")
+                Dinero.Text = "1200";
+            else
+                Dinero.Text = (string)e.Parameter;
+        }
+
         private void Go_Shop(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Tienda));
+            string currentMoney = Dinero.Text;
+            Frame.Navigate(typeof(Tienda), currentMoney);
         }
 
         private void Go_DeckCreator(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(CreadorMazo));
+            string currentMoney = Dinero.Text;
+            Frame.Navigate(typeof(CreadorMazo), currentMoney);
         }
 
         private void Go_Settings(object sender, RoutedEventArgs e)
