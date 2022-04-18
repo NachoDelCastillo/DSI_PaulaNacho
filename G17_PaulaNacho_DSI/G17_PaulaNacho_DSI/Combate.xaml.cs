@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.DataTransfer;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -46,6 +47,17 @@ namespace G17_PaulaNacho_DSI
         private void BatImage_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             batEstado.Visibility = Visibility.Collapsed;
+        }
+
+        private void ContentControl_DragStarting(UIElement sender, DragStartingEventArgs args)
+        {
+            ContentControl O = sender as ContentControl;
+            args.Data.SetText(O.Name);
+            args.Data.RequestedOperation = DataPackageOperation.Copy;
+        }
+        private void MiCanvas_DragOver(object sender, DragEventArgs e)
+        {
+            e.AcceptedOperation = DataPackageOperation.Copy;
         }
     }
 }
