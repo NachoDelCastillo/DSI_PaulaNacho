@@ -55,9 +55,28 @@ namespace G17_PaulaNacho_DSI
             args.Data.SetText(O.Name);
             args.Data.RequestedOperation = DataPackageOperation.Copy;
         }
-        private void MiCanvas_DragOver(object sender, DragEventArgs e)
+        private void MiZona_DragOver(object sender, DragEventArgs e)
         {
             e.AcceptedOperation = DataPackageOperation.Copy;
         }
+
+        private async void MiZona_Drop(object sender, DragEventArgs e)
+        {
+            var Oname = await e.DataView.GetTextAsync();
+            ContentControl O = FindName(Oname.ToString()) as ContentControl;
+
+            if (MisCartas.Children.Count >= 1) 
+            {
+                MisCartas.Children.Remove(O);
+            }
+            
+            MiZona.Children.Add(O);
+            Point pos = e.GetPosition(MiZona);
+            //O.CanDrag = false;
+            O.SetValue(Grid.ColumnProperty, pos.X-50);
+            O.SetValue(Grid.RowProperty, pos.Y-50);
+
+        }
+
     }
 }
