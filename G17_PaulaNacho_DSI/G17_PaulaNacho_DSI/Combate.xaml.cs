@@ -60,7 +60,7 @@ namespace G17_PaulaNacho_DSI
             e.AcceptedOperation = DataPackageOperation.Copy;
         }
 
-        private async void MiZona_Drop(object sender, DragEventArgs e)
+        private async void MiZonaBat_Drop(object sender, DragEventArgs e)
         {
             var Oname = await e.DataView.GetTextAsync();
             ContentControl O = FindName(Oname.ToString()) as ContentControl;
@@ -70,13 +70,29 @@ namespace G17_PaulaNacho_DSI
                 MisCartas.Children.Remove(O);
             }
             
-            MiZona.Children.Add(O);
-            Point pos = e.GetPosition(MiZona);
-            //O.CanDrag = false;
-            O.SetValue(Grid.ColumnProperty, pos.X-50);
-            O.SetValue(Grid.RowProperty, pos.Y-50);
+            MiZonaBat.Children.Add(O);
+            Point pos = e.GetPosition(MiZonaBat);
+            O.CanDrag = false;
+            O.SetValue(Grid.ColumnProperty, pos.X+100);
+            O.SetValue(Grid.RowProperty, pos.Y+20);
+           
 
         }
+        private async void MiZonaOgro_Drop(object sender, DragEventArgs e)
+        {
+            var Oname = await e.DataView.GetTextAsync();
+            ContentControl O = FindName(Oname.ToString()) as ContentControl;
 
+            if (MisCartas.Children.Count >= 1) 
+            {
+                MisCartas.Children.Remove(O);
+            }
+            
+            MiZonaOgro.Children.Add(O);
+            Point pos = e.GetPosition(MiZonaOgro);
+            O.CanDrag = false;
+            O.SetValue(Canvas.LeftProperty, pos.X-40);
+            O.SetValue(Canvas.TopProperty, pos.Y-100);
+        }
     }
 }
