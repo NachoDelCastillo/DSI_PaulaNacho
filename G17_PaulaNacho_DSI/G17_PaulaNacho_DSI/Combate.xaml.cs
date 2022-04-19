@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
@@ -64,7 +65,7 @@ namespace G17_PaulaNacho_DSI
         {
             var Oname = await e.DataView.GetTextAsync();
             ContentControl O = FindName(Oname.ToString()) as ContentControl;
-
+           
             if (MisCartas.Children.Count >= 1) 
             {
                 MisCartas.Children.Remove(O);
@@ -75,7 +76,11 @@ namespace G17_PaulaNacho_DSI
             O.CanDrag = false;
             O.SetValue(Grid.ColumnProperty, pos.X+100);
             O.SetValue(Grid.RowProperty, pos.Y+20);
-           
+
+            Image img= this.FindName(Oname + "Img") as Image;
+            Uri imageUri = new Uri("ms-appx:///Assets/Combate/cartaBrillo.png");
+            BitmapImage imageBitmap = new BitmapImage(imageUri);
+            img.Source =imageBitmap;
 
         }
         private async void MiZonaOgro_Drop(object sender, DragEventArgs e)
@@ -93,6 +98,11 @@ namespace G17_PaulaNacho_DSI
             O.CanDrag = false;
             O.SetValue(Canvas.LeftProperty, pos.X-40);
             O.SetValue(Canvas.TopProperty, pos.Y-100);
+
+            Image img = this.FindName(Oname + "Img") as Image;
+            Uri imageUri = new Uri("ms-appx:///Assets/Combate/cartaBrillo.png");
+            BitmapImage imageBitmap = new BitmapImage(imageUri);
+            img.Source = imageBitmap;
         }
     }
 }

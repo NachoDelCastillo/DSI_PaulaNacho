@@ -137,19 +137,19 @@
         </Button>
         <StackPanel x:Name="MisCartas" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" Margin="5">
             <ContentControl x:Name="child1" CanDrag="True" DragStarting="ContentControl_DragStarting">
-                <Image Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Image x:Name="child1Img" Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </ContentControl>
 
             <ContentControl x:Name="child2" CanDrag="True" DragStarting="ContentControl_DragStarting">
-                <Image Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Image x:Name="child2Img" Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </ContentControl>
 
             <ContentControl x:Name="child3" CanDrag="True" DragStarting="ContentControl_DragStarting">
-                <Image Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Image x:Name="child3Img" Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </ContentControl>
 
             <ContentControl x:Name="child4" CanDrag="True" DragStarting="ContentControl_DragStarting">
-                <Image Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Image x:Name="child4Img" Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </ContentControl>
         </StackPanel>
     </Grid>
