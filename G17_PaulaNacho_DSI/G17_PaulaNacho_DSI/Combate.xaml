@@ -26,6 +26,7 @@
             <Button Click="Go_Settings" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
         </Grid>
 
+
         <Canvas x:Name="MiZonaMago" AllowDrop="False">
             <StackPanel  Orientation="Vertical" VerticalAlignment="Center"  HorizontalAlignment="Center">
                 <Image  Source="Assets/Combate/mago.png"/>
@@ -83,7 +84,7 @@
             </StackPanel>
         </Canvas>
 
-
+        
         <Canvas x:Name="MiZonaBat" Grid.Column="2" AllowDrop="True" Drop="MiZonaBat_Drop" DragOver="MiZona_DragOver">
             <StackPanel  Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="10" Canvas.Top="10" Canvas.Left="-40" >
                 <Image Source="Assets/Combate/bat.png" Height="200" Canvas.Top="50"/>
@@ -120,7 +121,7 @@
 
             </StackPanel>
         </Canvas>
-
+       
         <Viewbox Grid.Row="3">
             <Border BorderThickness="10"  CornerRadius="20" BorderBrush="Black" Background="WhiteSmoke" 
                     Height="150" Margin="15" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -141,22 +142,24 @@
 
             </Button>
         </Viewbox>
-        <StackPanel x:Name="MisCartas" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" Margin="5">
-            <ContentControl x:Name="child1" CanDrag="True" DragStarting="ContentControl_DragStarting">
-                <Image x:Name="child1Img" Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            </ContentControl>
+        <Viewbox Grid.Row="3" Grid.Column="1">
+            <StackPanel x:Name="MisCartas" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5">
+                <ContentControl x:Name="child1" CanDrag="True" DragStarting="ContentControl_DragStarting">
+                    <Image x:Name="child1Img" Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </ContentControl>
 
-            <ContentControl x:Name="child2" CanDrag="True" DragStarting="ContentControl_DragStarting">
-                <Image x:Name="child2Img" Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            </ContentControl>
+                <ContentControl x:Name="child2" CanDrag="True" DragStarting="ContentControl_DragStarting">
+                    <Image x:Name="child2Img" Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </ContentControl>
 
-            <ContentControl x:Name="child3" CanDrag="True" DragStarting="ContentControl_DragStarting">
-                <Image x:Name="child3Img" Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            </ContentControl>
+                <ContentControl x:Name="child3" CanDrag="True" DragStarting="ContentControl_DragStarting">
+                    <Image x:Name="child3Img" Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </ContentControl>
 
-            <ContentControl x:Name="child4" CanDrag="True" DragStarting="ContentControl_DragStarting">
-                <Image x:Name="child4Img" Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            </ContentControl>
-        </StackPanel>
+                <ContentControl x:Name="child4" CanDrag="True" DragStarting="ContentControl_DragStarting">
+                    <Image x:Name="child4Img" Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </ContentControl>
+            </StackPanel>
+        </Viewbox>
     </Grid>
 </Page>
