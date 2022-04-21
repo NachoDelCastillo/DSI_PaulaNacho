@@ -124,16 +124,27 @@ namespace G17_PaulaNacho_DSI
             //Baja 3 puntos al escudo
             int currentShield = int.Parse(batShield.Text);
 
-            if (currentShield - 3 >= 0)
+            if (currentShield - 3 > 0)
             {
-                batShield.Text = (currentShield - 4).ToString();
+                batShield.Text = (currentShield - 3).ToString();
+            }
+            else if (currentShield == 1) 
+            {
+                batShield.Text = (currentShield-1).ToString();
+                int currentLife = int.Parse(batLife.Text);
+                if (currentLife - 2 >= 0)
+                {
+                    batLife.Text = (currentLife - 2).ToString();
+                    batLifeBar.Value = currentLife;
+                }
             }
             else //Si no quedan puntos al escudo se los baja a la vida
             {
                 int currentLife = int.Parse(batLife.Text);
                 if (currentLife - 3 >= 0)
                 {
-                    batLife.Text = (currentLife - 4).ToString();
+                    batLife.Text = (currentLife - 3).ToString();
+                    batLifeBar.Value = currentLife;
                 }
 
             }
@@ -173,16 +184,28 @@ namespace G17_PaulaNacho_DSI
             int currentShield = int.Parse(ogroShield.Text);
 
             //Baja la vida del escudo
-            if (currentShield - 3 >= 0)
+           
+            if (currentShield - 3 > 0)
             {
-                ogroShield.Text = (currentShield-4).ToString();
+                ogroShield.Text = (currentShield - 3).ToString();
+            }
+            else if (currentShield == 1)
+            {
+                ogroShield.Text = (currentShield - 1).ToString();
+                int currentLife = int.Parse(ogroLife.Text);
+                if (currentLife - 2 >= 0)
+                {
+                    ogroLife.Text = (currentLife - 2).ToString();
+                    ogroLifeBar.Value = currentLife;
+                }
             }
             else //Si no quedan puntos al escudo se los baja a la vida
             {
                 int currentLife = int.Parse(ogroLife.Text);
                 if (currentLife - 3 >= 0)
                 {
-                    ogroLife.Text = (currentLife - 4).ToString();
+                    ogroLife.Text = (currentLife - 3).ToString();
+                    batLifeBar.Value = currentLife;
                 }
 
             }
