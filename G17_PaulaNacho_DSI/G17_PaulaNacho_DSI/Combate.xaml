@@ -26,8 +26,8 @@
             <Button Click="Go_Settings" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
         </Grid>
 
-
-        <Canvas x:Name="MiZonaMago" AllowDrop="False">
+        <Viewbox>
+        <Grid x:Name="MiZonaMago" AllowDrop="False">
             <StackPanel  Orientation="Vertical" VerticalAlignment="Center"  HorizontalAlignment="Center">
                 <Image  Source="Assets/Combate/mago.png"/>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80">
@@ -64,7 +64,8 @@
 
             </StackPanel>
 
-        </Canvas>
+        </Grid>
+        </Viewbox>
 
         <Canvas Grid.Column="1" x:Name="MiZonaOgro" AllowDrop="True" Drop="MiZonaOgro_Drop" DragOver="MiZona_DragOver">
             <StackPanel Orientation="Vertical" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center" Canvas.Left="300">
