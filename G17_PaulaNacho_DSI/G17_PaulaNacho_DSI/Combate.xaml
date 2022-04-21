@@ -87,44 +87,45 @@
         </Grid>
         </Viewbox>
 
-
-        <Canvas x:Name="MiZonaBat" Grid.Column="2" AllowDrop="True" Drop="MiZonaBat_Drop" DragOver="MiZona_DragOver">
-            <StackPanel  Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="10" Canvas.Top="10" Canvas.Left="-40" >
-                <Image Source="Assets/Combate/bat.png" Height="200" Canvas.Top="50"/>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80">
-                    <Grid>
-                        <Image  Source="Assets/Combate/shield.png" />
-                        <TextBlock x:Name="batShield" Text="4" FontWeight="Bold" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    </Grid>
-                    <Grid>
-                        <ProgressBar x:Name="batLifeBar"  Maximum="30" Value="24" Background="Black" Foreground="Red"  VerticalAlignment="Center"/>
-                        <TextBlock x:Name="batLife" Text="24" FontWeight="Bold" FontSize="25"  VerticalAlignment="Center" HorizontalAlignment="Left" Margin="-2,0,0,0" RenderTransformOrigin="1.363,0.529" />
-                        <TextBlock Text="/30" FontWeight="Bold" FontSize="25"  VerticalAlignment="Center" HorizontalAlignment="Left" Margin="32,0,0,0" />
-
-                    </Grid>
-                    <Grid Margin="10" Width="200">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="2*"/>
-                        </Grid.ColumnDefinitions>
-                        <Image Source="Assets/Combate/hielo.png"
-                       Height="35" 
-                       VerticalAlignment="Center" 
-                       HorizontalAlignment="Center"
-                       PointerEntered="BatImage_PointerEntered"
-                       PointerExited="BatImage_PointerExited"/>
-
-                        <Grid x:Name="batEstado" Visibility="Collapsed" Grid.Column="1">
-                            <Rectangle Fill="FloralWhite" />
-                            <TextBlock Foreground="RosyBrown" TextWrapping="Wrap" Text="ESTADO: Helado Impide defender durante ese turno" HorizontalAlignment="Center"/>
+        <Viewbox Grid.Column="2" >
+            <Grid x:Name="MiZonaBat" AllowDrop="True" Drop="MiZonaBat_Drop" DragOver="MiZona_DragOver">
+                <StackPanel  Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="10" Canvas.Top="10" Canvas.Left="-40" >
+                    <Image Source="Assets/Combate/bat.png" Height="200" Canvas.Top="50"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80">
+                        <Grid>
+                            <Image  Source="Assets/Combate/shield.png" />
+                            <TextBlock x:Name="batShield" Text="4" FontWeight="Bold" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </Grid>
+                        <Grid>
+                            <ProgressBar x:Name="batLifeBar"  Maximum="30" Value="24" Background="Black" Foreground="Red"  VerticalAlignment="Center"/>
+                            <TextBlock x:Name="batLife" Text="24" FontWeight="Bold" FontSize="25"  VerticalAlignment="Center" HorizontalAlignment="Left" Margin="-2,0,0,0" RenderTransformOrigin="1.363,0.529" />
+                            <TextBlock Text="/30" FontWeight="Bold" FontSize="25"  VerticalAlignment="Center" HorizontalAlignment="Left" Margin="32,0,0,0" />
 
-                    </Grid>
+                        </Grid>
+                        <Grid Margin="10" Width="200">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="Assets/Combate/hielo.png"
+                           Height="35" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Center"
+                           PointerEntered="BatImage_PointerEntered"
+                           PointerExited="BatImage_PointerExited"/>
+
+                            <Grid x:Name="batEstado" Visibility="Collapsed" Grid.Column="1">
+                                <Rectangle Fill="FloralWhite" />
+                                <TextBlock Foreground="RosyBrown" TextWrapping="Wrap" Text="ESTADO: Helado Impide defender durante ese turno" HorizontalAlignment="Center"/>
+                            </Grid>
+
+                        </Grid>
+                    </StackPanel>
+
                 </StackPanel>
+            </Grid>
+        </Viewbox>
 
-            </StackPanel>
-        </Canvas>
-       
         <Viewbox Grid.Row="3">
             <Border BorderThickness="10"  CornerRadius="20" BorderBrush="Black" Background="WhiteSmoke" 
                     Height="150" Margin="15" VerticalAlignment="Center" HorizontalAlignment="Center">
