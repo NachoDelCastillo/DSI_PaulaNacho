@@ -67,9 +67,10 @@
         </Grid>
         </Viewbox>
 
-        <Canvas Grid.Column="1" x:Name="MiZonaOgro" AllowDrop="True" Drop="MiZonaOgro_Drop" DragOver="MiZona_DragOver">
+        <Viewbox Grid.Column="1" >
+        <Grid x:Name="MiZonaOgro" AllowDrop="True" Drop="MiZonaOgro_Drop" DragOver="MiZona_DragOver">
             <StackPanel Orientation="Vertical" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center" Canvas.Left="300">
-                <Image Source="Assets/Combate/ogro.png" Height="450"/>
+                <Image Source="Assets/Combate/ogro.png" Height="400"/>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80">
                     <Grid>
                         <Image  Source="Assets/Combate/shield.png" />
@@ -83,9 +84,10 @@
                     </Grid>
                 </StackPanel>
             </StackPanel>
-        </Canvas>
+        </Grid>
+        </Viewbox>
 
-        
+
         <Canvas x:Name="MiZonaBat" Grid.Column="2" AllowDrop="True" Drop="MiZonaBat_Drop" DragOver="MiZona_DragOver">
             <StackPanel  Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="10" Canvas.Top="10" Canvas.Left="-40" >
                 <Image Source="Assets/Combate/bat.png" Height="200" Canvas.Top="50"/>
