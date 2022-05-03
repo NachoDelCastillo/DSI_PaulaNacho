@@ -135,7 +135,7 @@ namespace G17_PaulaNacho_DSI
                 if (currentLife - 2 >= 0)
                 {
                     batLife.Text = (currentLife - 2).ToString();
-                    batLifeBar.Value = currentLife;
+                    batLifeBar.Value -= 2;
                 }
             }
             else //Si no quedan puntos al escudo se los baja a la vida
@@ -144,7 +144,7 @@ namespace G17_PaulaNacho_DSI
                 if (currentLife - 3 >= 0)
                 {
                     batLife.Text = (currentLife - 3).ToString();
-                    batLifeBar.Value = currentLife;
+                    batLifeBar.Value -=3;
                 }
 
             }
@@ -196,7 +196,7 @@ namespace G17_PaulaNacho_DSI
                 if (currentLife - 2 >= 0)
                 {
                     ogroLife.Text = (currentLife - 2).ToString();
-                    ogroLifeBar.Value = currentLife;
+                    ogroLifeBar.Value -= 2;
                 }
             }
             else //Si no quedan puntos al escudo se los baja a la vida
@@ -205,7 +205,7 @@ namespace G17_PaulaNacho_DSI
                 if (currentLife - 3 >= 0)
                 {
                     ogroLife.Text = (currentLife - 3).ToString();
-                    batLifeBar.Value = currentLife;
+                    ogroLifeBar.Value -= 3;
                 }
 
             }
