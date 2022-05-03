@@ -24,41 +24,44 @@
         </Button>
 
         <!--TITULO DE ZONA-->
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1453*"/>
-                <ColumnDefinition Width="47*"/>
-            </Grid.ColumnDefinitions>
-            <Image Width="800" VerticalAlignment="Center" HorizontalAlignment="Left" Source="Assets/Iconos/banner.png" Margin="350,0,0,0"/>
-            <TextBlock Text="CREADOR DE MAZO" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="40" FontWeight="Bold" Margin="559,0,0,0"/>
-        </Grid>
-
+        <Viewbox Grid.Row="1" HorizontalAlignment="Center">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1453*"/>
+                    <ColumnDefinition Width="47*"/>
+                </Grid.ColumnDefinitions>
+                <Image Width="800" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png"/>
+                <TextBlock Text="CREADOR DE MAZO" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold"/>
+            </Grid>
+        </Viewbox>
 
         <!--AJUSTES-->
-        <Button Click="Go_Settings"
+        <Button Click="Go_Settings" Background="MidnightBlue"
             HorizontalAlignment ="Right" VerticalAlignment="Center" >
             <Image Source="Assets/Iconos/ajustes.png" />
         </Button>
 
         <!--DINERO-->
-        <StackPanel Orientation="Horizontal">
-            <TextBlock x:Name="Dinero"
-                       FontSize="32"
+        <Viewbox VerticalAlignment="Center" HorizontalAlignment="Left">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="Dinero"
+                       VerticalAlignment="Center"
                        Foreground="White"
                        TextAlignment="Center"
                        Text="1200"
-                       Margin="10,5,5,5"
-                       FontWeight="Bold" Height="51">
-            </TextBlock>
-            <Image Source="Assets/Iconos/dinero.png"  Margin="15" />
-        </StackPanel>
+                       Margin="20,5,5,5"
+                       FontWeight="Bold" FontSize="200">
+                </TextBlock>
+                <Image Source="Assets/Iconos/dinero.png"  Margin="15" />
+            </StackPanel>
+        </Viewbox>
 
 
         <Canvas x:Name="MiCanvas" Grid.Row="2" DragOver="Drag_Over" AllowDrop="True"/>
 
-
+        <Viewbox Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"  
-                    Orientation="Vertical" Grid.Row="2">
+                    Orientation="Vertical">
 
             <StackPanel  Orientation="Horizontal">
 
@@ -196,23 +199,26 @@
             </StackPanel>
 
         </StackPanel>
+        </Viewbox>
 
         <!--SELECTOR MENU-->
-        <StackPanel Grid.Row="3" 
+        <Viewbox Grid.Row="3">
+        <StackPanel  
                     Orientation="Horizontal" 
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center"
                     Spacing="100">
-            <Button Click="Go_Shop">
-                <Image Source="Assets/Iconos/tienda.png" HorizontalAlignment="Right" Margin="5" Height="60" />
+            <Button Click="Go_Shop" Background="DodgerBlue">
+                <Image Source="Assets/Iconos/tienda.png" HorizontalAlignment="Right" Margin="5" Height="250" />
             </Button>
-            <Button Click="Go_SelectScreen">
-                <Image Source="Assets/Iconos/gamepad.png" HorizontalAlignment="Right" Margin="5" Height="60"/>
+            <Button Click="Go_SelectScreen" Background="DodgerBlue">
+                <Image Source="Assets/Iconos/gamepad.png" HorizontalAlignment="Right" Margin="5" Height="250"/>
             </Button>
-            <Button>
+            <Button Background="DodgerBlue">
                 <Image Source="Assets/Iconos/mazo.png" HorizontalAlignment="Right" Margin="5"/>
             </Button>
         </StackPanel>
+        </Viewbox>
     </Grid>
 </Page>
 
