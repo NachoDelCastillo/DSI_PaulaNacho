@@ -110,5 +110,32 @@ namespace G17_PaulaNacho_DSI
             ClickPulsado = false;
             Window.Current.CoreWindow.PointerCursor = CursorPin;
         }
+
+
+
+        // METODOS PARA CAMBIAR LAS CARTAS DE SITIO
+
+        private async void CardDrop(object sender, DragEventArgs e)
+        {
+            // Encontrar la carta que se ha dropeado
+            var name = await e.DataView.GetTextAsync();
+            ContentControl cardDrag = FindName(name) as ContentControl;
+            // Carta en la que se ha depositado una carta
+            // (objeto que ha generado el evento drop)
+            ContentControl cardDrop = e.OriginalSource as ContentControl;
+            changeCardsPositions(cardDrop, cardDrag);
+        }
+
+        private void changeCardsPositions(ContentControl cardDrop, ContentControl cardDrag)
+        {
+            StackPanel mazoParent = cardDrop.Parent as StackPanel;
+            StackPanel cartaParent = cardDrag.Parent as StackPanel;
+
+            mazoParent.Children.Remove(cardDrop);
+            cartaParent.Children.Remove(cardDrag);
+
+            mazoParent.Children.Add(cardDrag);
+            cartaParent.Children.Add(cardDrop);
+        }
     }
 }
