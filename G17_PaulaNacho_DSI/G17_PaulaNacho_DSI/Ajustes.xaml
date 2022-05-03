@@ -26,40 +26,40 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
+            <RowDefinition Height="8*"/>
             <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
         <Border Background="MidnightBlue"/>
-        <Border Grid.Row="1" Background="#2f5cb6"/>
+        <Border Grid.Row="1" Background="#2f5cb6" Grid.RowSpan="2"/>
 
-
-        <StackPanel VerticalAlignment="Center" Grid.Row="1" Orientation="Vertical"
+        <!--TITULO DE ZONA-->
+        <Viewbox Grid.Row="1">
+        <Grid >
+            <Image Width="800" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png"/>
+            <TextBlock Text="AJUSTES" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold"/>
+        </Grid>
+        </Viewbox>
+        <Viewbox Grid.Row="2">
+        <StackPanel VerticalAlignment="Center"  Orientation="Vertical"
                     Spacing="50" Height="833">
-
-            <!--TITULO DE ZONA-->
-            <Grid Grid.Row="1">
-                <Image Width="800" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png"/>
-                <TextBlock Text="AJUSTES" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold"/>
-            </Grid>
-
-            
             <!--SONIDO E IDIOMA--> 
-            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Orientation="Horizontal" Spacing="300">
+            <StackPanel HorizontalAlignment="Center" Grid.Row="2" Orientation="Horizontal" Spacing="300">
 
-                <StackPanel VerticalAlignment="Center" Grid.Row="1" Orientation="Vertical" Spacing="20"
+                <StackPanel VerticalAlignment="Center" Grid.Row="2" Orientation="Vertical" Spacing="20"
                              Background="YellowGreen" BorderThickness="8" BorderBrush="Green" 
                         CornerRadius ="8" Height="164">
 
-                    <StackPanel HorizontalAlignment="Center" Grid.Row="1" Orientation="Horizontal" Spacing="30">
-                        <Image Width="60" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/volumen.png"/>
+                    <StackPanel HorizontalAlignment="Center" Grid.Row="2" Orientation="Horizontal" Spacing="30">
+                        <Image Width="60" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/volumen.png"/>
                         <Slider Maximum="10" Width="300" VerticalAlignment="Center" TickFrequency="10" />
                     </StackPanel>
-                    <StackPanel HorizontalAlignment="Center" Grid.Row="1" Orientation="Horizontal" Spacing="30">
-                        <Image Width="60" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/music.png"/>
+                    <StackPanel HorizontalAlignment="Center" Grid.Row="2" Orientation="Horizontal" Spacing="30">
+                        <Image Width="60" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/music.png"/>
                         <Slider Maximum="10" Width="300" VerticalAlignment="Center" TickFrequency="10" />
                     </StackPanel>
                 </StackPanel>
 
-                <StackPanel Grid.Row="1" Orientation="Vertical" Spacing="20"
+                <StackPanel Grid.Row="2" Orientation="Vertical" Spacing="20"
                             Background="Orange" BorderThickness="8" BorderBrush="DarkOrange" 
                         CornerRadius ="8" Width="268" Height="283"  >
 
@@ -102,6 +102,7 @@
             </StackPanel>
 
         </StackPanel>
+        </Viewbox>
 
     </Grid>
 </Page>
