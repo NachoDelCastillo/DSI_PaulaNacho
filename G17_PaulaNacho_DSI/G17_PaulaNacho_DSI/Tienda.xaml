@@ -34,33 +34,37 @@
         <Border Grid.Row="3" Background="DodgerBlue"/>
 
         <!--AJUSTES-->
-        <Button Click="Go_Settings"
+        <Button Click="Go_Settings " Background="MidnightBlue"
             HorizontalAlignment ="Right" VerticalAlignment="Center" >
         <Image Source="Assets/Iconos/ajustes.png" />
         </Button>
 
         <!--DINERO-->
-        <StackPanel Orientation="Horizontal"> 
-            <TextBlock x:Name="Dinero"
-                       FontSize="32"
+        <Viewbox  VerticalAlignment="Center" HorizontalAlignment="Left">
+        <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="Dinero"
+                       VerticalAlignment="Center"
                        Foreground="White"
                        TextAlignment="Center"
                        Text="1200"
-                       Margin="10,5,5,5"
-                       FontWeight="Bold" Height="51">
-            </TextBlock>
-            <Image Source="Assets/Iconos/dinero.png"  Margin="15" />
+                       Margin="20,5,5,5"
+                       FontWeight="Bold" FontSize="200">
+                </TextBlock>
+                <Image Source="Assets/Iconos/dinero.png"  Margin="15" />
         </StackPanel>
+        </Viewbox>
 
         <!--TITULO DE ZONA-->
-        <Grid Grid.Row="1">
+        <Viewbox Grid.Row="1">
+        <Grid >
             <Image Width="800" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png"/>
             <TextBlock Text="TIENDA" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold"/>
         </Grid>
-
+        </Viewbox>
         
         <!--ZONA DE INTERES-->
-        <StackPanel Orientation="Vertical" Grid.Row="2">
+        <Viewbox Grid.Row="2">
+        <StackPanel Orientation="Vertical" >
             <GridView  x:Name="gridview_" ItemsSource="123456789ABDCDEFGHIJKLMNOPQRSTU" Width="976" Height="536">
                 <GridView.ItemTemplate>
                     <DataTemplate>
@@ -79,23 +83,26 @@
                 </GridView.ItemTemplate>
             </GridView>
         </StackPanel>
+        </Viewbox>
 
-        
+
         <!--SELECTOR MENU-->
-        <StackPanel Grid.Row="3" 
+        <Viewbox Grid.Row="3">
+        <StackPanel  
                     Orientation="Horizontal" 
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center"
                     Spacing="100">
-            <Button>
+            <Button Background="DodgerBlue">
                 <Image Source="Assets/Iconos/tienda.png" HorizontalAlignment="Right" Margin="5 " />
             </Button>
-            <Button Click="Go_SelectScreen">
-                <Image Source="Assets/Iconos/gamepad.png" HorizontalAlignment="Right" Margin="5" Height="60"/>
+            <Button Click="Go_SelectScreen" Background="DodgerBlue">
+                <Image Source="Assets/Iconos/gamepad.png" HorizontalAlignment="Right" Margin="5" Height="250"/>
             </Button>
-            <Button Click="Go_DeckCreator">
-                <Image Source="Assets/Iconos/mazo.png" HorizontalAlignment="Right" Margin="5" Height="60"/>
+            <Button Click="Go_DeckCreator" Background="DodgerBlue">
+                <Image Source="Assets/Iconos/mazo.png" HorizontalAlignment="Right" Margin="5" Height="250"/>
             </Button>
         </StackPanel>
+        </Viewbox>
     </Grid>
 </Page>
