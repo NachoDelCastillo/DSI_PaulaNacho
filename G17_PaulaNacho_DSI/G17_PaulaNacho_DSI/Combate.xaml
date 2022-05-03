@@ -141,13 +141,17 @@
             <Button x:Name="FinTurno" Margin="40" Click="FinTurno_Click"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center" Height="100" Width="200"
-                    Background="Tomato" FontSize="30" FontWeight="Bold"
+                    Background="LightGray" FontSize="30" FontWeight="Bold"
                     CornerRadius="8" Content="Fin de turno">
 
             </Button>
         </Viewbox>
         <Viewbox Grid.Row="3" Grid.Column="1">
             <StackPanel x:Name="MisCartas" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5">
+                <ContentControl x:Name="child0" CanDrag="True" DragStarting="ContentControl_DragStarting">
+                    <Image x:Name="child0Img" Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </ContentControl>
+
                 <ContentControl x:Name="child1" CanDrag="True" DragStarting="ContentControl_DragStarting">
                     <Image x:Name="child1Img" Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </ContentControl>
@@ -158,10 +162,6 @@
 
                 <ContentControl x:Name="child3" CanDrag="True" DragStarting="ContentControl_DragStarting">
                     <Image x:Name="child3Img" Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                </ContentControl>
-
-                <ContentControl x:Name="child4" CanDrag="True" DragStarting="ContentControl_DragStarting">
-                    <Image x:Name="child4Img" Source="Assets/Combate/carta.png" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </ContentControl>
             </StackPanel>
         </Viewbox>

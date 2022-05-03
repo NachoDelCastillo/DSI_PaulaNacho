@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -111,7 +112,7 @@ namespace G17_PaulaNacho_DSI
             //Coloca la carta en la posicion adecuada
             MiZonaBat.Children.Add(O);
             Point pos = e.GetPosition(MiZonaBat);
-            O.CanDrag = false;
+     
             O.SetValue(Grid.ColumnProperty, pos.X+100);
             O.SetValue(Grid.RowProperty, pos.Y+20);
 
@@ -155,7 +156,7 @@ namespace G17_PaulaNacho_DSI
             timer.Start();
             timer.Tick += Timer_Tick;
 
-
+            //cambiaColorBoton();
         }
         private async void MiZonaOgro_Drop(object sender, DragEventArgs e)
         {
@@ -171,7 +172,7 @@ namespace G17_PaulaNacho_DSI
             //Coloca la carta en la posicion adecuada
             MiZonaOgro.Children.Add(O);
             Point pos = e.GetPosition(MiZonaOgro);
-            O.CanDrag = false;
+        
             O.SetValue(Canvas.LeftProperty, pos.X-40);
             O.SetValue(Canvas.TopProperty, pos.Y-100);
 
@@ -212,19 +213,22 @@ namespace G17_PaulaNacho_DSI
                 }
 
             }
-
+           
             //Activa el timer
             timer.Start();
             timer.Tick += Timer_Tick;
+           // cambiaColorBoton();
         }
 
         private void FinTurno_Click(object sender, RoutedEventArgs e)
         {   
             //Cuando pulsas el fin de turno, se quitan las cartas de las zonas de los enemigos, regresan a la zona de cartas del jugador
             //Y se reestablece su imagen original
+            
+
             for (int i = 0; i < numCartasTot; i++)
             {
-                ContentControl O = FindName("child"+((i+1).ToString())) as ContentControl;
+                ContentControl O = FindName("child"+((i).ToString())) as ContentControl;
                 if (O.Parent == MiZonaOgro) 
                 {
                     MiZonaOgro.Children.Remove(O);
@@ -236,14 +240,20 @@ namespace G17_PaulaNacho_DSI
                     MisCartas.Children.Add(O);
 
                 }
-                O.CanDrag = true;
+             
                 Image img = O.Content as Image;
                 Uri imageUri = new Uri("ms-appx:///Assets/Combate/carta.png");
                 BitmapImage imageBitmap = new BitmapImage(imageUri);
                 img.Source = imageBitmap;
                 img.Visibility = Visibility.Visible;
             }
-            
+           // cambiaColorBoton();
+        }
+        void cambiaColorBoton() //Si no ha acabado de atacar con todas las cartas el boton esta gris, cuando termina se pone rojo
+        {
+            if (MisCartas.Children.Count < 1) 
+                FinTurno.Background = new SolidColorBrush(Color.FromArgb(255, 255, 99, 71));
+            else FinTurno.Background = new SolidColorBrush(Color.FromArgb(255, 177, 182, 183));
         }
     }
 }
