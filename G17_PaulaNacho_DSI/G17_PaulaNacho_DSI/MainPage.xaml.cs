@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.System;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
 
@@ -65,6 +66,38 @@ namespace G17_PaulaNacho_DSI
         private void StartBattleButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Combate));
+        }
+
+        private void bigButton_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == VirtualKey.Enter) 
+            {
+                Frame.Navigate(typeof(Combate));
+            }
+        }
+
+        private void tiendaButton_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == VirtualKey.Enter)
+            {
+                Frame.Navigate(typeof(Tienda));
+            }
+        }
+
+        private void mazoButton_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == VirtualKey.Enter)
+            {
+                Frame.Navigate(typeof(CreadorMazo));
+            }
+        }
+
+        private void ajustesButton_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == VirtualKey.Enter)
+            {
+                Frame.Navigate(typeof(Ajustes));
+            }
         }
     }
 }

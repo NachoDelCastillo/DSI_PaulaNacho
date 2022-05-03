@@ -34,7 +34,8 @@
             <StackPanel Orientation="Horizontal" Margin="40" Spacing="50" >
 
                 <Button Click="StartBattleButton_Click"
-                Background="Yellow" BorderBrush="YellowGreen">
+                Background="Yellow" BorderBrush="YellowGreen" IsTabStop="True" 
+                        UseSystemFocusVisuals="True" TabIndex="0" KeyDown="bigButton_KeyDown">
                     <StackPanel Orientation="Vertical" Spacing="2" >
                         <Image Source="Assets/Iconos/historia.png" Height="80" VerticalAlignment="Top"/>
                         <TextBlock FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Text="Historia"></TextBlock>
@@ -44,7 +45,8 @@
                 </Button>
 
                 <Button Click="StartBattleButton_Click"
-                Background="DeepSkyBlue" BorderBrush="DarkSlateBlue">
+                Background="DeepSkyBlue" BorderBrush="DarkSlateBlue" IsTabStop="True" 
+                        UseSystemFocusVisuals="True" TabIndex="1" KeyDown="bigButton_KeyDown">
                     <StackPanel Orientation="Vertical" Spacing="2" >
                         <Image Source="Assets/Iconos/lucha.png" Height="80" VerticalAlignment="Top"/>
                         <TextBlock FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Text="Lucha"></TextBlock>
@@ -54,8 +56,9 @@
             </StackPanel>
         </Viewbox>
 
-        <Button Click="Go_Settings" Style="{x:Null}" Background="MidnightBlue"
-            HorizontalAlignment ="Right" VerticalAlignment="Center" >
+        <Button x:Name="ajustesButton" Click="Go_Settings" Style="{x:Null}" Background="MidnightBlue"
+            HorizontalAlignment ="Right" VerticalAlignment="Center" IsTabStop="True" 
+                UseSystemFocusVisuals="True" TabIndex="5" KeyDown="ajustesButton_KeyDown" >
             <Image Source="Assets/Iconos/ajustes.png" />
         </Button>
 
@@ -73,13 +76,16 @@
                     HorizontalAlignment="Center"
                     Spacing="400">
 
-                <Button Style="{x:Null}" Click="Go_Shop" Background="DodgerBlue">
+                <Button x:Name="tiendaButton" Style="{x:Null}" Click="Go_Shop" Background="DodgerBlue"  IsTabStop="True" 
+                        UseSystemFocusVisuals="True" TabIndex="2" KeyDown="tiendaButton_KeyDown">
                     <Image Source="Assets/Iconos/tienda.png" HorizontalAlignment="Right" Margin="5" Height="250" />
                 </Button>
-                <Button Style="{x:Null}" Background="DodgerBlue">
+                <Button Style="{x:Null}" Background="DodgerBlue"  IsTabStop="True"
+                        UseSystemFocusVisuals="True" TabIndex="3">
                     <Image Source="Assets/Iconos/gamepad.png" HorizontalAlignment="Right" Margin="5"/>
                 </Button>
-                <Button Style="{x:Null}" Click="Go_DeckCreator" Background="DodgerBlue">
+                <Button x:Name="mazoButton" Style="{x:Null}" Click="Go_DeckCreator" Background="DodgerBlue"  IsTabStop="True" 
+                        UseSystemFocusVisuals="True" TabIndex="4" KeyDown="mazoButton_KeyDown">
                     <Image Source="Assets/Iconos/mazo.png" HorizontalAlignment="Right" Margin="5" Height="250"/>
                 </Button>
 
