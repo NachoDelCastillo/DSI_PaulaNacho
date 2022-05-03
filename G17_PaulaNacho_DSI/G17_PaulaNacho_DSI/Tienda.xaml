@@ -35,7 +35,7 @@
 
         <!--AJUSTES-->
         <Button Click="Go_Settings " Background="MidnightBlue"
-            HorizontalAlignment ="Right" VerticalAlignment="Center" >
+            HorizontalAlignment ="Right" VerticalAlignment="Center" IsTabStop="True" TabIndex="4" UseSystemFocusVisuals="True" >
         <Image Source="Assets/Iconos/ajustes.png" />
         </Button>
 
@@ -65,16 +65,17 @@
         <!--ZONA DE INTERES-->
         <Viewbox Grid.Row="2">
         <StackPanel Orientation="Vertical" >
-            <GridView  x:Name="gridview_" ItemsSource="123456789ABDCDEFGHIJKLMNOPQRSTU" Width="976" Height="536">
+                <GridView  x:Name="gridview_" ItemsSource="123456789ABDCDEFGHIJKLMNOPQRSTU" Width="976" Height="536" IsTabStop="True" UseSystemFocusVisuals="True" XYFocusKeyboardNavigation="Enabled"
+                                TabIndex="0">
                 <GridView.ItemTemplate>
                     <DataTemplate>
                         <Button x:Name="button__" Margin="20" Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
-                                 Click="ItemClick">
+                                 Click="ItemClick" IsTabStop="False" >
                             <StackPanel Orientation="Vertical" Spacing="2" > 
-                                <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top"/>
+                                <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top" />
                                 <StackPanel Orientation="Horizontal" Spacing="2" >
-                                    <TextBlock  Style="{StaticResource itemValueText}" FontSize="20" TextWrapping="Wrap" 
-                               Text="100" Width="59" Height="30" VerticalAlignment="Center" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                    <TextBlock Style="{StaticResource itemValueText}" FontSize="20" TextWrapping="Wrap" 
+                               Text="100" Width="59" Height="30" VerticalAlignment="Center" TextAlignment="Center" Margin="0,0,0,-1" />
                                     <Image Source="Assets/Iconos/dinero.png" Height="30"/>
                                 </StackPanel>
                             </StackPanel>
@@ -93,13 +94,13 @@
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center"
                     Spacing="100">
-            <Button Background="DodgerBlue">
+            <Button Background="DodgerBlue" IsTabStop="True" UseSystemFocusVisuals="True" TabIndex="1">
                 <Image Source="Assets/Iconos/tienda.png" HorizontalAlignment="Right" Margin="5 " />
             </Button>
-            <Button Click="Go_SelectScreen" Background="DodgerBlue">
+                <Button Click="Go_SelectScreen" Background="DodgerBlue" IsTabStop="True" UseSystemFocusVisuals="True" TabIndex="2">
                 <Image Source="Assets/Iconos/gamepad.png" HorizontalAlignment="Right" Margin="5" Height="250"/>
             </Button>
-            <Button Click="Go_DeckCreator" Background="DodgerBlue">
+                <Button Click="Go_DeckCreator" Background="DodgerBlue" IsTabStop="True" UseSystemFocusVisuals="True" TabIndex="3">
                 <Image Source="Assets/Iconos/mazo.png" HorizontalAlignment="Right" Margin="5" Height="250"/>
             </Button>
         </StackPanel>

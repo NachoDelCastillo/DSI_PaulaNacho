@@ -70,5 +70,6 @@ namespace G17_PaulaNacho_DSI
                 Dinero.Text = (currentMoney - 100).ToString();
             }
         }
+
     }
 }
