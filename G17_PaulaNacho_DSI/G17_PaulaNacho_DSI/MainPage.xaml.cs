@@ -68,36 +68,36 @@ namespace G17_PaulaNacho_DSI
             Frame.Navigate(typeof(Combate));
         }
 
-        private void bigButton_KeyDown(object sender, KeyRoutedEventArgs e)
-        {
-            if (e.Key == VirtualKey.Enter) 
-            {
-                Frame.Navigate(typeof(Combate));
-            }
-        }
+        //private void bigButton_KeyDown(object sender, KeyRoutedEventArgs e)
+        //{
+        //    if (e.Key == VirtualKey.Enter) 
+        //    {
+        //        Frame.Navigate(typeof(Combate));
+        //    }
+        //}
 
-        private void tiendaButton_KeyDown(object sender, KeyRoutedEventArgs e)
-        {
-            if (e.Key == VirtualKey.Enter)
-            {
-                Frame.Navigate(typeof(Tienda));
-            }
-        }
+        //private void tiendaButton_KeyDown(object sender, KeyRoutedEventArgs e)
+        //{
+        //    if (e.Key == VirtualKey.Enter)
+        //    {
+        //        Frame.Navigate(typeof(Tienda));
+        //    }
+        //}
 
-        private void mazoButton_KeyDown(object sender, KeyRoutedEventArgs e)
-        {
-            if (e.Key == VirtualKey.Enter)
-            {
-                Frame.Navigate(typeof(CreadorMazo));
-            }
-        }
+        //private void mazoButton_KeyDown(object sender, KeyRoutedEventArgs e)
+        //{
+        //    if (e.Key == VirtualKey.Enter)
+        //    {
+        //        Frame.Navigate(typeof(CreadorMazo));
+        //    }
+        //}
 
-        private void ajustesButton_KeyDown(object sender, KeyRoutedEventArgs e)
-        {
-            if (e.Key == VirtualKey.Enter)
-            {
-                Frame.Navigate(typeof(Ajustes));
-            }
-        }
+        ////private void ajustesButton_KeyDown(object sender, KeyRoutedEventArgs e)
+        ////{
+        ////    if (e.Key == VirtualKey.Enter)
+        ////    {
+        ////        Frame.Navigate(typeof(Ajustes));
+        ////    }
+        ////}
     }
 }

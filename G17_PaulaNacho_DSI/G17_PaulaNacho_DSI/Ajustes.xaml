@@ -47,15 +47,17 @@
 
                 <StackPanel VerticalAlignment="Center" Grid.Row="2" Orientation="Vertical" Spacing="20"
                              Background="YellowGreen" BorderThickness="8" BorderBrush="Green" 
-                        CornerRadius ="8" Height="164">
+                        CornerRadius ="8" Height="164" >
 
                     <StackPanel HorizontalAlignment="Center" Grid.Row="2" Orientation="Horizontal" Spacing="30">
                         <Image Width="60" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/volumen.png"/>
-                        <Slider Maximum="10" Width="300" VerticalAlignment="Center" TickFrequency="10" />
+                        <Slider Maximum="10" Width="300" VerticalAlignment="Center" TickFrequency="10" IsTabStop="True" 
+                                TabIndex="0" UseSystemFocusVisuals="True"/>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Center" Grid.Row="2" Orientation="Horizontal" Spacing="30">
                         <Image Width="60" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/music.png"/>
-                        <Slider Maximum="10" Width="300" VerticalAlignment="Center" TickFrequency="10" />
+                            <Slider Maximum="10" Width="300" VerticalAlignment="Center" TickFrequency="10" IsTabStop="True" 
+                                TabIndex="1" UseSystemFocusVisuals="True" />
                     </StackPanel>
                 </StackPanel>
 
@@ -69,11 +71,14 @@
                         <Image Width="60" Source="Assets/Iconos/mundo.png"/>
                     </StackPanel>
 
-                    <Button>
-                        <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
-                                   Text="Español"/>
+                    <Button IsTabStop="True" 
+                            TabIndex="2" UseSystemFocusVisuals="True">
+                    <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
+                               Text="Español"/>
                     </Button>
-                    <Button>
+
+                        <Button IsTabStop="True" 
+                                TabIndex="3" UseSystemFocusVisuals="True">
                         <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
                                    Text="English"/>
                     </Button>
@@ -86,16 +91,21 @@
                         CornerRadius ="8"
                         Spacing="30" Height="163" Width="827">
 
-                <Button Click="goBackButtonClick">
+                <Button Click="goBackButtonClick" IsTabStop="True" 
+                                TabIndex="4" UseSystemFocusVisuals="True">
                     <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
                                    Text="Volver"/>
                 </Button>
-                <Button Click="goToMenu">
-                    <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
+
+                <Button Click="goToMenu" IsTabStop="True" 
+                            TabIndex="5" UseSystemFocusVisuals="True">
+                <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
                                    Text="Menu Principal"/>
                 </Button>
-                <Button Click="ExitButtonClick">
-                    <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
+
+                <Button Click="ExitButtonClick" IsTabStop="True" 
+                            TabIndex="6" UseSystemFocusVisuals="True">
+                <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
                                    Text="Salir del juego"/>
                 </Button>
 
