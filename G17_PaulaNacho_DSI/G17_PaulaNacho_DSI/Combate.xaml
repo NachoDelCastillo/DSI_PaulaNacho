@@ -138,7 +138,7 @@
             </Border>
         </Viewbox>
         <Viewbox Grid.Row="3" Grid.Column="3">
-            <Button Margin="40"
+            <Button x:Name="FinTurno" Margin="40" Click="FinTurno_Click"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center" Height="100" Width="200"
                     Background="Tomato" FontSize="30" FontWeight="Bold"

@@ -30,12 +30,15 @@ namespace G17_PaulaNacho_DSI
         //Variabe para guardar la carta que se acaba de poner en un enemigo
         Image cartaActualBat = null;
         Image cartaActualOgro = null;
-
+        int numCartasTot = 0;
     public Combate()
         {
             this.InitializeComponent();
         }
-
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            numCartasTot = MisCartas.Children.Count; //Guarda el numero de cartas que hay al empezar
+        }
         //Navegacion ajustes
         private void Go_Settings(object sender, RoutedEventArgs e)
         {
@@ -213,6 +216,34 @@ namespace G17_PaulaNacho_DSI
             //Activa el timer
             timer.Start();
             timer.Tick += Timer_Tick;
+        }
+
+        private void FinTurno_Click(object sender, RoutedEventArgs e)
+        {   
+            //Cuando pulsas el fin de turno, se quitan las cartas de las zonas de los enemigos, regresan a la zona de cartas del jugador
+            //Y se reestablece su imagen original
+            for (int i = 0; i < numCartasTot; i++)
+            {
+                ContentControl O = FindName("child"+((i+1).ToString())) as ContentControl;
+                if (O.Parent == MiZonaOgro) 
+                {
+                    MiZonaOgro.Children.Remove(O);
+                    MisCartas.Children.Add(O);
+                }
+                else if (O.Parent == MiZonaBat)
+                {
+                    MiZonaBat.Children.Remove(O);
+                    MisCartas.Children.Add(O);
+
+                }
+                O.CanDrag = true;
+                Image img = O.Content as Image;
+                Uri imageUri = new Uri("ms-appx:///Assets/Combate/carta.png");
+                BitmapImage imageBitmap = new BitmapImage(imageUri);
+                img.Source = imageBitmap;
+                img.Visibility = Visibility.Visible;
+            }
+            
         }
     }
 }
