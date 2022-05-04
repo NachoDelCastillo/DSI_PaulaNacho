@@ -32,6 +32,10 @@ namespace G17_PaulaNacho_DSI
             this.Suspending += OnSuspending;
         }
 
+        // 0 = español / 1 = Ingles
+        // Inicialmente en español
+        public static int idioma = 0;
+
         /// <summary>
         /// Se invoca cuando la aplicación la inicia normalmente el usuario final. Se usarán otros puntos
         /// de entrada cuando la aplicación se inicie para abrir un archivo específico, por ejemplo.

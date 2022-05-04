@@ -36,7 +36,7 @@
         <Viewbox Grid.Row="1">
         <Grid >
             <Image Width="800" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png"/>
-            <TextBlock Text="AJUSTES" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold"/>
+            <TextBlock x:Name="Ajustes_Text" Text="AJUSTES" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold"/>
         </Grid>
         </Viewbox>
         <Viewbox Grid.Row="2">
@@ -69,22 +69,22 @@
                         <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
                                    Text="Idioma" FontSize="50" Foreground="DarkRed"/>
                         <Image Width="60" Source="Assets/Iconos/mundo.png"/>
-                    </StackPanel>
+                        </StackPanel>
 
-                    <Button IsTabStop="True" 
+                        <Button Click="ChangeLaguage" x:Name="SpanishButton" IsTabStop="True" 
                             TabIndex="2" UseSystemFocusVisuals="True">
-                    <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
+                            <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
                                Text="Español"/>
-                    </Button>
+                        </Button>
 
-                        <Button IsTabStop="True" 
+                        <Button Click="ChangeLaguage" x:Name="EnglishButton" IsTabStop="True" 
                                 TabIndex="3" UseSystemFocusVisuals="True">
-                        <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
+                            <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
                                    Text="English"/>
-                    </Button>
+                        </Button>
 
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
                         Background="YellowGreen" BorderThickness="8" BorderBrush="Green" 

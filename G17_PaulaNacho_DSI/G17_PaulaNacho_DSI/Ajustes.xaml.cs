@@ -27,6 +27,12 @@ namespace G17_PaulaNacho_DSI
             this.InitializeComponent();
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            UpdateLanguageTexts();
+        }
+
 
         private void goToMenu(object sender, RoutedEventArgs e)
         {
@@ -42,6 +48,28 @@ namespace G17_PaulaNacho_DSI
         private void ExitButtonClick(object sender, RoutedEventArgs e)
         {
             Application.Current.Exit();
+        }
+
+        private void ChangeLaguage(object sender, RoutedEventArgs e)
+        {
+            if (e.OriginalSource == SpanishButton)
+                App.idioma = 0;
+            else
+                App.idioma = 1;
+
+            UpdateLanguageTexts();
+        }
+
+        void UpdateLanguageTexts()
+        {
+            if (App.idioma == 0)
+            {
+                Ajustes_Text.Text = "AJUSTES";
+            }
+            else
+            {
+                Ajustes_Text.Text = "SETTINGS";
+            }
         }
     }
 }
