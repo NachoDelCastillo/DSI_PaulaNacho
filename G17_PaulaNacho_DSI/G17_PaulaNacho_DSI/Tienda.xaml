@@ -65,10 +65,12 @@
         <!--ZONA DE INTERES-->
         <Viewbox Grid.Row="2">
             <ScrollViewer Height="490">
+                <ContentControl IsTabStop="True" IsFocusEngagementEnabled="True" UseSystemFocusVisuals="True" TabIndex="0">
                 <StackPanel Orientation="Vertical" >
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                       
                         <Button x:Name="Card_0" Margin="20" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
-                                 Click="ItemClick" IsTabStop="False">
+                                 Click="ItemClick" IsTabStop="True">
                             <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
                                 <Image Source="Assets/Iconos/eyeRed.png" Height="70" VerticalAlignment="Top"/>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -79,7 +81,7 @@
                             </StackPanel>
                         </Button>
                         <Button x:Name="Card_1" Margin="20" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
-                                 Click="ItemClick" IsTabStop="False" >
+                                 Click="ItemClick" IsTabStop="True" >
                             <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
                                 <Image Source="Assets/Iconos/mundo.png" Height="70" VerticalAlignment="Top"/>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -90,7 +92,7 @@
                             </StackPanel>
                         </Button>
                         <Button x:Name="Card_2" Margin="20" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
-                                 Click="ItemClick" IsTabStop="False" >
+                                 Click="ItemClick" IsTabStop="True" >
                             <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
                                 <Image Source="Assets/Iconos/pata.png" Height="70" VerticalAlignment="Top"/>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -105,7 +107,7 @@
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button x:Name="Card_3" Margin="20" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
-                                 Click="ItemClick" IsTabStop="False">
+                                 Click="ItemClick" IsTabStop="True">
                             <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
                                 <Image Source="Assets/Iconos/flame.png" Height="70" VerticalAlignment="Top"/>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -116,7 +118,7 @@
                             </StackPanel>
                         </Button>
                         <Button x:Name="Card_4" Margin="20" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
-                                 Click="ItemClick" IsTabStop="False" >
+                                 Click="ItemClick" IsTabStop="True" >
                             <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
                                 <Image Source="Assets/Iconos/book.png" Height="70" VerticalAlignment="Top"/>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -127,7 +129,7 @@
                             </StackPanel>
                         </Button>
                         <Button x:Name="Card_5" Margin="20" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
-                                 Click="ItemClick" IsTabStop="False" >
+                                 Click="ItemClick" IsTabStop="True" >
                             <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
                                 <Image Source="Assets/Iconos/incognito.png" Height="70" VerticalAlignment="Top"/>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -141,7 +143,7 @@
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button x:Name="Card_6" Margin="20" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
-                                 Click="ItemClick" IsTabStop="False">
+                                 Click="ItemClick" IsTabStop="True">
                             <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
                                 <Image Source="Assets/Iconos/hamburguesa.png" Height="70" VerticalAlignment="Top"/>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -152,7 +154,7 @@
                             </StackPanel>
                         </Button>
                         <Button x:Name="Card_7" Margin="20" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
-                                 Click="ItemClick" IsTabStop="False" >
+                                 Click="ItemClick" IsTabStop="True" >
                             <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
                                 <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top"/>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -163,7 +165,7 @@
                             </StackPanel>
                         </Button>
                         <Button x:Name="Card_8" Margin="20" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
-                                 Click="ItemClick" IsTabStop="False" >
+                                 Click="ItemClick" IsTabStop="True" >
                             <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
                                 <Image Source="Assets/Iconos/tornillo.png" Height="70" VerticalAlignment="Top"/>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -175,6 +177,7 @@
                         </Button>
                     </StackPanel>
                 </StackPanel>
+                </ContentControl>
             </ScrollViewer>
         </Viewbox>
 
@@ -187,15 +190,15 @@
                     HorizontalAlignment="Center"
                     Spacing="400">
                 <Button x:Name="tiendaButton" Style="{x:Null}" Background="DodgerBlue"  IsTabStop="True" 
-                        UseSystemFocusVisuals="True" TabIndex="2" >
+                        UseSystemFocusVisuals="True" TabIndex="1" >
                     <Image Source="Assets/Iconos/tienda.png" HorizontalAlignment="Right" Margin="5" />
                 </Button>
                 <Button Style="{x:Null}" Background="DodgerBlue"  Click="Go_SelectScreen"  IsTabStop="True"
-                        UseSystemFocusVisuals="True" TabIndex="3">
+                        UseSystemFocusVisuals="True" TabIndex="2">
                     <Image Source="Assets/Iconos/gamepad.png" HorizontalAlignment="Right" Margin="5" Height="250"/>
                 </Button>
                 <Button x:Name="mazoButton" Style="{x:Null}" Click="Go_DeckCreator" Background="DodgerBlue"  IsTabStop="True" 
-                        UseSystemFocusVisuals="True" TabIndex="4" >
+                        UseSystemFocusVisuals="True" TabIndex="3" >
                     <Image Source="Assets/Iconos/mazo.png" HorizontalAlignment="Right" Margin="5" Height="250"/>
                 </Button>
             </StackPanel>
