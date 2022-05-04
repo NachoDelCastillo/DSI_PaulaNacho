@@ -66,140 +66,179 @@
 
             <StackPanel  Orientation="Horizontal">
 
-                <StackPanel Orientation="Vertical" Background="LightGreen" 
+                    <StackPanel Orientation="Vertical" Background="LightGreen" 
                             BorderBrush="DarkGreen" CornerRadius="8" BorderThickness="5"
                             Height="446" Width="640">
 
 
-                    <StackPanel x:Name="MazoActual" >
-                        <StackPanel Grid.Column="0" Orientation="Horizontal" Padding="5" Background="DarkGray" HorizontalAlignment="Center">
-                            <StackPanel>
-                                <ContentControl x:Name="Card_0" CanDrag="True" DragStarting="Drag_Starting" 
+                        <StackPanel x:Name="MazoActual" >
+                            <StackPanel Grid.Column="0" Orientation="Horizontal" Padding="5" Background="DarkGray" HorizontalAlignment="Center">
+                                <StackPanel>
+                                    <ContentControl x:Name="Card_0" CanDrag="True" DragStarting="Drag_Starting" 
                                                 AllowDrop="True" Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="0">
-                                    <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
+                                        <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
                                                 Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
-                                        <Image Source="Assets/Iconos/book.png" Height="70" VerticalAlignment="Top"/>
-                                        <TextBlock FontSize="16" TextWrapping="Wrap" 
+                                            <Image Source="Assets/Iconos/book.png" Height="70" VerticalAlignment="Top"/>
+                                            <TextBlock FontSize="16" TextWrapping="Wrap" 
                                Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
-                                    </StackPanel>
-                                </ContentControl>
-                            </StackPanel>
-                            <StackPanel>
-                                <ContentControl x:Name="Card_1" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" 
+                                        </StackPanel>
+                                    </ContentControl>
+                                </StackPanel>
+                                <StackPanel>
+                                    <ContentControl x:Name="Card_1" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" 
                                                 Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="1">
-                                    <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
+                                        <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
                                                 Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
-                                        <Image Source="Assets/Iconos/eyeCross.png" Height="70" VerticalAlignment="Top"/>
-                                        <TextBlock FontSize="16" TextWrapping="Wrap" 
+                                            <Image Source="Assets/Iconos/eyeCross.png" Height="70" VerticalAlignment="Top"/>
+                                            <TextBlock FontSize="16" TextWrapping="Wrap" 
                                Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
-                                    </StackPanel>
-                                </ContentControl>
-                            </StackPanel>
-                            <StackPanel>
-                                <ContentControl x:Name="Card_2" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True"
+                                        </StackPanel>
+                                    </ContentControl>
+                                </StackPanel>
+                                <StackPanel>
+                                    <ContentControl x:Name="Card_2" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True"
                                                 Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="2">
-                                    <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
+                                        <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
                                                 Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
-                                        <Image Source="Assets/Iconos/flame.png" Height="70" VerticalAlignment="Top"/>
-                                        <TextBlock FontSize="16" TextWrapping="Wrap" 
+                                            <Image Source="Assets/Iconos/flame.png" Height="70" VerticalAlignment="Top"/>
+                                            <TextBlock FontSize="16" TextWrapping="Wrap" 
                                Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
-                                    </StackPanel>
-                                </ContentControl>
+                                        </StackPanel>
+                                    </ContentControl>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                        <StackPanel Grid.Column="0" Orientation="Horizontal" Padding="5" Background="DarkGray" HorizontalAlignment="Center">
-                            <StackPanel>
-                                <ContentControl x:Name="Card_3" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" Drop="CardDrop" 
+                            <StackPanel Grid.Column="0" Orientation="Horizontal" Padding="5" Background="DarkGray" HorizontalAlignment="Center">
+                                <StackPanel>
+                                    <ContentControl x:Name="Card_3" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" Drop="CardDrop" 
                                                 DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="3">
-                                    <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
+                                        <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
                                                 Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
-                                        <Image Source="Assets/Iconos/lucha.png" Height="70" VerticalAlignment="Top"/>
-                                        <TextBlock FontSize="16" TextWrapping="Wrap" 
+                                            <Image Source="Assets/Iconos/lucha.png" Height="70" VerticalAlignment="Top"/>
+                                            <TextBlock FontSize="16" TextWrapping="Wrap" 
                                Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
-                                    </StackPanel>
-                                </ContentControl>
-                            </StackPanel>
-                            <StackPanel>
-                                <ContentControl x:Name="Card_4" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" 
+                                        </StackPanel>
+                                    </ContentControl>
+                                </StackPanel>
+                                <StackPanel>
+                                    <ContentControl x:Name="Card_4" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" 
                                                 Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="4">
-                                    <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
+                                        <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
                                                 Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
-                                        <Image Source="Assets/Iconos/objetivo.png" Height="70" VerticalAlignment="Top"/>
-                                        <TextBlock FontSize="16" TextWrapping="Wrap" 
+                                            <Image Source="Assets/Iconos/objetivo.png" Height="70" VerticalAlignment="Top"/>
+                                            <TextBlock FontSize="16" TextWrapping="Wrap" 
                                Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
-                                    </StackPanel>
-                                </ContentControl>
-                            </StackPanel>
-                            <StackPanel>
-                                <ContentControl x:Name="Card_5" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" 
+                                        </StackPanel>
+                                    </ContentControl>
+                                </StackPanel>
+                                <StackPanel>
+                                    <ContentControl x:Name="Card_5" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" 
                                                 Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="5">
-                                    <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
+                                        <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
                                                 Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
-                                        <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top"/>
-                                        <TextBlock FontSize="16" TextWrapping="Wrap" 
+                                            <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top"/>
+                                            <TextBlock FontSize="16" TextWrapping="Wrap" 
                                Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
-                                    </StackPanel>
-                                </ContentControl>
+                                        </StackPanel>
+                                    </ContentControl>
+                                </StackPanel>
                             </StackPanel>
                         </StackPanel>
+
+
+                        <!--TITULO DE ZONA-->
+                        <Grid Grid.Row="1">
+                            <Image Width="584" VerticalAlignment="Top" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png" Height="106"/>
+                            <TextBlock Text="MAZO ACTUAL" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"/>
+                        </Grid>
                     </StackPanel>
+                
+                
+                        <GridView Width="326">
 
-
-                    <!--TITULO DE ZONA-->
-                    <Grid Grid.Row="1">
-                        <Image Width="584" VerticalAlignment="Top" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png" Height="106"/>
-                        <TextBlock Text="MAZO ACTUAL" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"/>
-                    </Grid>
-                </StackPanel>
-
-                <StackPanel x:Name="MiStack" Grid.Column="0" Orientation="Vertical" Padding="5" Background="DarkGray">
-
-                    <StackPanel>
-                        <ContentControl x:Name="Card_6" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" 
+                                <StackPanel>
+                                    <ContentControl x:Name="Card_6" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" 
                                         Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="6">
-                            <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
+                                        <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
                                                 Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
-                                <Image Source="Assets/Iconos/eyeRed.png" Height="70" VerticalAlignment="Top"/>
-                                <TextBlock FontSize="16" TextWrapping="Wrap" 
+                                            <Image Source="Assets/Iconos/eyeRed.png" Height="70" VerticalAlignment="Top"/>
+                                            <TextBlock FontSize="16" TextWrapping="Wrap" 
                                Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
-                            </StackPanel>
-                        </ContentControl>
-                    </StackPanel>
-
-                    <StackPanel>
-                        <ContentControl x:Name="Card_7" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" Drop="CardDrop" DragOver="Drag_Over"
+                                        </StackPanel>
+                                    </ContentControl>
+                                </StackPanel>
+                                <StackPanel>
+                                    <ContentControl x:Name="Card_7" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" Drop="CardDrop" DragOver="Drag_Over"
                                         IsTabStop="True" UseSystemFocusVisuals="True" TabIndex="7">
-                            <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
+                                        <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
                                                 Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
-                                <Image Source="Assets/Iconos/pata.png" Height="70" VerticalAlignment="Top"/>
-                                <TextBlock FontSize="16" TextWrapping="Wrap" 
+                                            <Image Source="Assets/Iconos/pata.png" Height="70" VerticalAlignment="Top"/>
+                                            <TextBlock FontSize="16" TextWrapping="Wrap" 
                                Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
-                            </StackPanel>
-                        </ContentControl>
-                    </StackPanel>
-
-                    <StackPanel>
-                        <ContentControl x:Name="Card_8" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" 
+                                        </StackPanel>
+                                    </ContentControl>
+                                </StackPanel>
+                                <StackPanel>
+                                    <ContentControl x:Name="Card_8" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" 
                                         Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="8">
-                            <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
+                                        <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
                                                 Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
-                                <Image Source="Assets/Iconos/tornillo.png" Height="70" VerticalAlignment="Top"/>
-                                <TextBlock FontSize="16" TextWrapping="Wrap" 
+                                            <Image Source="Assets/Iconos/tornillo.png" Height="70" VerticalAlignment="Top"/>
+                                            <TextBlock FontSize="16" TextWrapping="Wrap" 
                                Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
-                            </StackPanel>
-                        </ContentControl>
-                    </StackPanel>
-                </StackPanel>
+                                        </StackPanel>
+                                    </ContentControl>
+                                </StackPanel>
 
-                <!--<GridView x:Name="MiGridView" ItemsSource="123456789ABDCDEFGHIJKLMNOPQRSTU" Width="656" Height="440"
+                        <StackPanel>
+                            <ContentControl x:Name="Card_9" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" 
+                                        Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
+                                                UseSystemFocusVisuals="True" TabIndex="8">
+                                <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
+                                                Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
+                                    <Image Source="Assets/Iconos/flame.png" Height="70" VerticalAlignment="Top"/>
+                                    <TextBlock FontSize="16" TextWrapping="Wrap" 
+                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                </StackPanel>
+                            </ContentControl>
+                        </StackPanel>
+
+                        <StackPanel>
+                            <ContentControl x:Name="Card_10" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" 
+                                        Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
+                                                UseSystemFocusVisuals="True" TabIndex="6">
+                                <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
+                                                Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
+                                    <Image Source="Assets/Iconos/eyeRed.png" Height="70" VerticalAlignment="Top"/>
+                                    <TextBlock FontSize="16" TextWrapping="Wrap" 
+                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                </StackPanel>
+                            </ContentControl>
+                        </StackPanel>
+
+                        <StackPanel>
+                            <ContentControl x:Name="Card_11" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" 
+                                                Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
+                                                UseSystemFocusVisuals="True" TabIndex="4">
+                                <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
+                                                Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
+                                    <Image Source="Assets/Iconos/objetivo.png" Height="70" VerticalAlignment="Top"/>
+                                    <TextBlock FontSize="16" TextWrapping="Wrap" 
+                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                </StackPanel>
+                            </ContentControl>
+                        </StackPanel>
+
+                    </GridView>
+
+                        <!--<GridView x:Name="MiGridView" ItemsSource="123456789ABDCDEFGHIJKLMNOPQRSTU" Width="656" Height="440"
                            DragOver="Drag_Over" AllowDrop="True" HorizontalAlignment="Center">
                     <GridView.ItemTemplate>
                         <DataTemplate>

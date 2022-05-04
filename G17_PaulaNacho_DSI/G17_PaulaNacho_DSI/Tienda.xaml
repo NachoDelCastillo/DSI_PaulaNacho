@@ -65,7 +65,24 @@
         <!--ZONA DE INTERES-->
         <Viewbox Grid.Row="2">
         <StackPanel Orientation="Vertical" >
-                <GridView  x:Name="gridview_" ItemsSource="123456789ABDCDEFGHIJKLMNOPQRSTU" Width="976" Height="536" IsTabStop="True" UseSystemFocusVisuals="True" XYFocusKeyboardNavigation="Enabled"
+
+                <GridView Width="326">
+
+                    <ContentControl x:Name="Card_0" IsTabStop="True" UseSystemFocusVisuals="True" TabIndex="0">
+
+                        <Button x:Name="button_0" Margin="20" Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
+                                 Click="ItemClick" IsTabStop="False" >
+                            <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
+                                <Image Source="Assets/Iconos/eyeRed.png" Height="70" VerticalAlignment="Top"/>
+                                <TextBlock FontSize="16" TextWrapping="Wrap"
+                               Text="200" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
+                            </StackPanel>
+                        </Button>
+                    </ContentControl>
+
+                </GridView>
+
+                <!--<GridView  x:Name="gridview_" ItemsSource="123456789ABDCDEFGHIJKLMNOPQRSTU" Width="976" Height="536" IsTabStop="True" UseSystemFocusVisuals="True" XYFocusKeyboardNavigation="Enabled"
                                 TabIndex="0">
                 <GridView.ItemTemplate>
                     <DataTemplate>
@@ -82,7 +99,7 @@
                         </Button>
                     </DataTemplate>
                 </GridView.ItemTemplate>
-            </GridView>
+            </GridView>-->
         </StackPanel>
         </Viewbox>
 
