@@ -64,11 +64,19 @@ namespace G17_PaulaNacho_DSI
         {
             if (App.idioma == 0)
             {
-                Ajustes_Text.Text = "AJUSTES";
+                Ajustes_Texto.Text = "AJUSTES";
+                Idioma_Texto.Text = "Idioma";
+                Volver_Texto.Text = "Volver";
+                MenuPrincipal_Texto.Text = "Menu Principal";
+                Salir_Texto.Text = "Salir Del Juego";
             }
             else
             {
-                Ajustes_Text.Text = "SETTINGS";
+                Ajustes_Texto.Text = "SETTINGS";
+                Idioma_Texto.Text = "Language";
+                Volver_Texto.Text = "Go Back";
+                MenuPrincipal_Texto.Text = "Main Menu";
+                Salir_Texto.Text = "Exit Game";
             }
         }
     }

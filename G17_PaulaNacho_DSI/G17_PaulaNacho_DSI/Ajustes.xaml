@@ -36,7 +36,7 @@
         <Viewbox Grid.Row="1">
         <Grid >
             <Image Width="800" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png"/>
-            <TextBlock x:Name="Ajustes_Text" Text="AJUSTES" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold"/>
+            <TextBlock x:Name="Ajustes_Texto" Text="AJUSTES" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold"/>
         </Grid>
         </Viewbox>
         <Viewbox Grid.Row="2">
@@ -63,22 +63,22 @@
 
                 <StackPanel Grid.Row="2" Orientation="Vertical" Spacing="20"
                             Background="Orange" BorderThickness="8" BorderBrush="DarkOrange" 
-                        CornerRadius ="8" Width="268" Height="283"  >
+                        CornerRadius ="8" Width="340" Height="283"  >
 
-                    <StackPanel Orientation="Horizontal" Spacing="20">
-                        <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
+                    <StackPanel Orientation="Horizontal" Spacing="20" HorizontalAlignment="Center">
+                        <TextBlock x:Name="Idioma_Texto" FontWeight="Bold" HorizontalAlignment="Center"
                                    Text="Idioma" FontSize="50" Foreground="DarkRed"/>
                         <Image Width="60" Source="Assets/Iconos/mundo.png"/>
                         </StackPanel>
 
                         <Button Click="ChangeLaguage" x:Name="SpanishButton" IsTabStop="True" 
-                            TabIndex="2" UseSystemFocusVisuals="True">
+                            TabIndex="2" UseSystemFocusVisuals="True" HorizontalAlignment="Center">
                             <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
                                Text="Español"/>
                         </Button>
 
                         <Button Click="ChangeLaguage" x:Name="EnglishButton" IsTabStop="True" 
-                                TabIndex="3" UseSystemFocusVisuals="True">
+                                TabIndex="3" UseSystemFocusVisuals="True" HorizontalAlignment="Center">
                             <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
                                    Text="English"/>
                         </Button>
@@ -93,19 +93,19 @@
 
                 <Button Click="goBackButtonClick" IsTabStop="True" 
                                 TabIndex="4" UseSystemFocusVisuals="True">
-                    <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
+                    <TextBlock x:Name="Volver_Texto" FontWeight="Bold" HorizontalAlignment="Center"
                                    Text="Volver"/>
                 </Button>
 
                 <Button Click="goToMenu" IsTabStop="True" 
                             TabIndex="5" UseSystemFocusVisuals="True">
-                <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
+                <TextBlock x:Name="MenuPrincipal_Texto" FontWeight="Bold" HorizontalAlignment="Center"
                                    Text="Menu Principal"/>
                 </Button>
 
                 <Button Click="ExitButtonClick" IsTabStop="True" 
                             TabIndex="6" UseSystemFocusVisuals="True">
-                <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
+                <TextBlock x:Name="Salir_Texto" FontWeight="Bold" HorizontalAlignment="Center"
                                    Text="Salir del juego"/>
                 </Button>
 
