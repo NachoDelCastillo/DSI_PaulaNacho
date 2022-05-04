@@ -31,7 +31,7 @@
                     <ColumnDefinition Width="47*"/>
                 </Grid.ColumnDefinitions>
                 <Image Width="800" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png"/>
-                <TextBlock Text="CREADOR DE MAZO" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold"/>
+                <TextBlock Name="CreadorMazo_Texto" Text="CREADOR DE MAZO" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold"/>
             </Grid>
         </Viewbox>
 
@@ -158,11 +158,9 @@
                         <!--TITULO DE ZONA-->
                         <Grid Grid.Row="1">
                             <Image Width="584" VerticalAlignment="Top" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png" Height="106"/>
-                            <TextBlock Text="MAZO ACTUAL" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"/>
+                            <TextBlock x:Name="MazoActual_Texto" Text="MAZO ACTUAL" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"/>
                         </Grid>
                     </StackPanel>
-
-                    <!--<GridView Width="363">-->
 
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Orientation="Vertical">
@@ -245,11 +243,8 @@
                                 </StackPanel>
                             </Button>
                         </StackPanel>
-
                     </StackPanel>
-                    <!--</GridView>-->
                 </StackPanel>
-
             </StackPanel>
         </Viewbox>
 

@@ -54,6 +54,8 @@ namespace G17_PaulaNacho_DSI
                 Dinero.Text = "1200";
             else
                 Dinero.Text = (string)e.Parameter;
+
+            UpdateLanguageTexts();
         }
 
 
@@ -202,6 +204,21 @@ namespace G17_PaulaNacho_DSI
                         changeCardsPositions(cc, cardSelected);
                     }
                     break;
+            }
+        }
+
+
+        void UpdateLanguageTexts()
+        {
+            if (App.idioma == 0)
+            {
+                CreadorMazo_Texto.Text = "CREADOR DE MAZO";
+                MazoActual_Texto.Text = "Mazo Actual";
+            }
+            else
+            {
+                CreadorMazo_Texto.Text = "DECK BUILDER";
+                MazoActual_Texto.Text = "Current deck";
             }
         }
     }
