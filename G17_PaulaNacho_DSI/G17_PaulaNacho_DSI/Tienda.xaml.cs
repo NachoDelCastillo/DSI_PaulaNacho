@@ -75,10 +75,10 @@ namespace G17_PaulaNacho_DSI
             // Si el texto existe, se almacena en value
 
             // Restar dinero
-            int currentMoney = int.Parse(Dinero.Text);
-            if (currentMoney - value >= 0)
+            if (App.dinero - value >= 0)
             {
-                Dinero.Text = (currentMoney - value).ToString();
+                App.dinero -= value;
+                Dinero.Text = App.dinero.ToString();
 
                 // El StackPanel que contiene este boton
                 StackPanel stackParent = buttonClicked.Parent as StackPanel;
