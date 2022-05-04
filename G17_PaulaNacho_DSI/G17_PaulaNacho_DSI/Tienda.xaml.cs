@@ -62,9 +62,11 @@ namespace G17_PaulaNacho_DSI
 
         private void ItemClick(object sender, RoutedEventArgs e)
         {
+            // Acceder al valor del texto
             Button buttonClicked = e.OriginalSource as Button;
-            StackPanel stackPanel = buttonClicked.Content as StackPanel;
-            TextBlock cardPriceText = stackPanel.Children[1] as TextBlock;
+            StackPanel stackPanel_0 = buttonClicked.Content as StackPanel;
+            StackPanel stackPanel_1 = stackPanel_0.Children[1] as StackPanel;
+            TextBlock cardPriceText = stackPanel_1.Children[0] as TextBlock;
 
             int value;
             // Si no se encuentra el texto detener el metodo
@@ -75,7 +77,14 @@ namespace G17_PaulaNacho_DSI
             // Restar dinero
             int currentMoney = int.Parse(Dinero.Text);
             if (currentMoney - value >= 0)
+            {
                 Dinero.Text = (currentMoney - value).ToString();
+
+                // El StackPanel que contiene este boton
+                StackPanel stackParent = buttonClicked.Parent as StackPanel;
+
+                stackParent.Children.Remove(buttonClicked);
+            }
         }
     }
 }

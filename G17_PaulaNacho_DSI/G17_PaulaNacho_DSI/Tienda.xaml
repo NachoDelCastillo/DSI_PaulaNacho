@@ -36,12 +36,12 @@
         <!--AJUSTES-->
         <Button Click="Go_Settings " Background="MidnightBlue"
             HorizontalAlignment ="Right" VerticalAlignment="Center" IsTabStop="True" TabIndex="4" UseSystemFocusVisuals="True" >
-        <Image Source="Assets/Iconos/ajustes.png" />
+            <Image Source="Assets/Iconos/ajustes.png" />
         </Button>
 
         <!--DINERO-->
         <Viewbox  VerticalAlignment="Center" HorizontalAlignment="Left">
-        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal">
                 <TextBlock x:Name="Dinero"
                        VerticalAlignment="Center"
                        Foreground="White"
@@ -51,76 +51,154 @@
                        FontWeight="Bold" FontSize="200">
                 </TextBlock>
                 <Image Source="Assets/Iconos/dinero.png"  Margin="15" />
-        </StackPanel>
+            </StackPanel>
         </Viewbox>
 
         <!--TITULO DE ZONA-->
         <Viewbox Grid.Row="1">
-        <Grid >
-            <Image Width="800" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png"/>
-            <TextBlock Text="TIENDA" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold"/>
-        </Grid>
+            <Grid >
+                <Image Width="800" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png"/>
+                <TextBlock Text="TIENDA" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold"/>
+            </Grid>
         </Viewbox>
-        
+
         <!--ZONA DE INTERES-->
         <Viewbox Grid.Row="2">
-        <StackPanel Orientation="Vertical" >
-
-                <GridView Width="326">
-
-                    <ContentControl x:Name="Card_0" IsTabStop="True" UseSystemFocusVisuals="True" TabIndex="0">
-
-                        <Button x:Name="button_0" Margin="20" Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
-                                 Click="ItemClick" IsTabStop="False" >
+            <ScrollViewer Height="490">
+                <StackPanel Orientation="Vertical" >
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="Card_0" Margin="20" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
+                                 Click="ItemClick" IsTabStop="False">
                             <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
                                 <Image Source="Assets/Iconos/eyeRed.png" Height="70" VerticalAlignment="Top"/>
-                                <TextBlock FontSize="16" TextWrapping="Wrap"
-                               Text="200" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
-                            </StackPanel>
-                        </Button>
-                    </ContentControl>
-
-                </GridView>
-
-                <!--<GridView  x:Name="gridview_" ItemsSource="123456789ABDCDEFGHIJKLMNOPQRSTU" Width="976" Height="536" IsTabStop="True" UseSystemFocusVisuals="True" XYFocusKeyboardNavigation="Enabled"
-                                TabIndex="0">
-                <GridView.ItemTemplate>
-                    <DataTemplate>
-                        <Button x:Name="button__" Margin="20" Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
-                                 Click="ItemClick" IsTabStop="False" >
-                            <StackPanel Orientation="Vertical" Spacing="2" > 
-                                <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top" />
-                                <StackPanel Orientation="Horizontal" Spacing="2" >
-                                    <TextBlock Style="{StaticResource itemValueText}" FontSize="20" TextWrapping="Wrap" 
-                               Text="100" Width="59" Height="30" VerticalAlignment="Center" TextAlignment="Center" Margin="0,0,0,-1" />
-                                    <Image Source="Assets/Iconos/dinero.png" Height="30"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock FontSize="30" TextWrapping="Wrap" Foreground="Black"
+                               Text="200" Width="55" Height="40" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                    <Image Source="Assets/Iconos/dinero.png" Width="35" VerticalAlignment="Top" Height="41"/>
                                 </StackPanel>
                             </StackPanel>
                         </Button>
-                    </DataTemplate>
-                </GridView.ItemTemplate>
-            </GridView>-->
-        </StackPanel>
+                        <Button x:Name="Card_1" Margin="20" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
+                                 Click="ItemClick" IsTabStop="False" >
+                            <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
+                                <Image Source="Assets/Iconos/mundo.png" Height="70" VerticalAlignment="Top"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock FontSize="30" TextWrapping="Wrap" Foreground="Black"
+                               Text="150" Width="55" Height="40" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                    <Image Source="Assets/Iconos/dinero.png" Width="30" VerticalAlignment="Top"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="Card_2" Margin="20" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
+                                 Click="ItemClick" IsTabStop="False" >
+                            <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
+                                <Image Source="Assets/Iconos/pata.png" Height="70" VerticalAlignment="Top"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock FontSize="30" TextWrapping="Wrap" Foreground="Black"
+                               Text="100" Width="55" Height="40" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                    <Image Source="Assets/Iconos/dinero.png" Width="30" VerticalAlignment="Top"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="Card_3" Margin="20" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
+                                 Click="ItemClick" IsTabStop="False">
+                            <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
+                                <Image Source="Assets/Iconos/flame.png" Height="70" VerticalAlignment="Top"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock FontSize="30" TextWrapping="Wrap" Foreground="Black"
+                               Text="20" Width="55" Height="40" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                    <Image Source="Assets/Iconos/dinero.png" Width="35" VerticalAlignment="Top" Height="41"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="Card_4" Margin="20" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
+                                 Click="ItemClick" IsTabStop="False" >
+                            <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
+                                <Image Source="Assets/Iconos/book.png" Height="70" VerticalAlignment="Top"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock FontSize="30" TextWrapping="Wrap" Foreground="Black"
+                               Text="120" Width="55" Height="40" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                    <Image Source="Assets/Iconos/dinero.png" Width="30" VerticalAlignment="Top"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="Card_5" Margin="20" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
+                                 Click="ItemClick" IsTabStop="False" >
+                            <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
+                                <Image Source="Assets/Iconos/incognito.png" Height="70" VerticalAlignment="Top"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock FontSize="30" TextWrapping="Wrap" Foreground="Black"
+                               Text="60" Width="55" Height="40" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                    <Image Source="Assets/Iconos/dinero.png" Width="30" VerticalAlignment="Top"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="Card_6" Margin="20" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
+                                 Click="ItemClick" IsTabStop="False">
+                            <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
+                                <Image Source="Assets/Iconos/hamburguesa.png" Height="70" VerticalAlignment="Top"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock FontSize="30" TextWrapping="Wrap" Foreground="Black"
+                               Text="400" Width="55" Height="40" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                    <Image Source="Assets/Iconos/dinero.png" Width="35" VerticalAlignment="Top" Height="41"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="Card_7" Margin="20" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
+                                 Click="ItemClick" IsTabStop="False" >
+                            <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
+                                <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock FontSize="30" TextWrapping="Wrap" Foreground="Black"
+                               Text="50" Width="55" Height="40" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                    <Image Source="Assets/Iconos/dinero.png" Width="30" VerticalAlignment="Top"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="Card_8" Margin="20" Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5"
+                                 Click="ItemClick" IsTabStop="False" >
+                            <StackPanel Orientation="Vertical" Spacing="2" Margin="23" Width="105" Height="113">
+                                <Image Source="Assets/Iconos/tornillo.png" Height="70" VerticalAlignment="Top"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock FontSize="30" TextWrapping="Wrap" Foreground="Black"
+                               Text="250" Width="55" Height="40" TextAlignment="Center" Margin="0,0,0,-1"/>
+                                    <Image Source="Assets/Iconos/dinero.png" Width="30" VerticalAlignment="Top"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
         </Viewbox>
 
 
         <!--SELECTOR MENU-->
         <Viewbox Grid.Row="3">
-        <StackPanel  
-                    Orientation="Horizontal" 
-                    VerticalAlignment="Center" 
+            <StackPanel  
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center"
                     HorizontalAlignment="Center"
-                    Spacing="100">
-            <Button Background="DodgerBlue" IsTabStop="True" UseSystemFocusVisuals="True" TabIndex="1">
-                <Image Source="Assets/Iconos/tienda.png" HorizontalAlignment="Right" Margin="5 " />
-            </Button>
-                <Button Click="Go_SelectScreen" Background="DodgerBlue" IsTabStop="True" UseSystemFocusVisuals="True" TabIndex="2">
-                <Image Source="Assets/Iconos/gamepad.png" HorizontalAlignment="Right" Margin="5" Height="250"/>
-            </Button>
-                <Button Click="Go_DeckCreator" Background="DodgerBlue" IsTabStop="True" UseSystemFocusVisuals="True" TabIndex="3">
-                <Image Source="Assets/Iconos/mazo.png" HorizontalAlignment="Right" Margin="5" Height="250"/>
-            </Button>
-        </StackPanel>
+                    Spacing="400">
+                <Button x:Name="tiendaButton" Style="{x:Null}" Background="DodgerBlue"  IsTabStop="True" 
+                        UseSystemFocusVisuals="True" TabIndex="2" >
+                    <Image Source="Assets/Iconos/tienda.png" HorizontalAlignment="Right" Margin="5" />
+                </Button>
+                <Button Style="{x:Null}" Background="DodgerBlue"  Click="Go_SelectScreen"  IsTabStop="True"
+                        UseSystemFocusVisuals="True" TabIndex="3">
+                    <Image Source="Assets/Iconos/gamepad.png" HorizontalAlignment="Right" Margin="5" Height="250"/>
+                </Button>
+                <Button x:Name="mazoButton" Style="{x:Null}" Click="Go_DeckCreator" Background="DodgerBlue"  IsTabStop="True" 
+                        UseSystemFocusVisuals="True" TabIndex="4" >
+                    <Image Source="Assets/Iconos/mazo.png" HorizontalAlignment="Right" Margin="5" Height="250"/>
+                </Button>
+            </StackPanel>
         </Viewbox>
     </Grid>
 </Page>

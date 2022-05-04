@@ -157,45 +157,45 @@
                             <TextBlock Text="MAZO ACTUAL" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"/>
                         </Grid>
                     </StackPanel>
-                
-                
-                        <GridView Width="326">
 
-                                <StackPanel>
-                                    <ContentControl x:Name="Card_6" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" 
+
+                    <GridView Width="326">
+
+                        <StackPanel>
+                            <ContentControl x:Name="Card_6" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" 
                                         Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="6">
-                                        <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
+                                <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
                                                 Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
-                                            <Image Source="Assets/Iconos/eyeRed.png" Height="70" VerticalAlignment="Top"/>
-                                            <TextBlock FontSize="16" TextWrapping="Wrap" 
+                                    <Image Source="Assets/Iconos/eyeRed.png" Height="70" VerticalAlignment="Top"/>
+                                    <TextBlock FontSize="16" TextWrapping="Wrap" 
                                Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
-                                        </StackPanel>
-                                    </ContentControl>
                                 </StackPanel>
-                                <StackPanel>
-                                    <ContentControl x:Name="Card_7" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" Drop="CardDrop" DragOver="Drag_Over"
+                            </ContentControl>
+                        </StackPanel>
+                        <StackPanel>
+                            <ContentControl x:Name="Card_7" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" Drop="CardDrop" DragOver="Drag_Over"
                                         IsTabStop="True" UseSystemFocusVisuals="True" TabIndex="7">
-                                        <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
+                                <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
                                                 Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
-                                            <Image Source="Assets/Iconos/pata.png" Height="70" VerticalAlignment="Top"/>
-                                            <TextBlock FontSize="16" TextWrapping="Wrap" 
+                                    <Image Source="Assets/Iconos/pata.png" Height="70" VerticalAlignment="Top"/>
+                                    <TextBlock FontSize="16" TextWrapping="Wrap" 
                                Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
-                                        </StackPanel>
-                                    </ContentControl>
                                 </StackPanel>
-                                <StackPanel>
-                                    <ContentControl x:Name="Card_8" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" 
+                            </ContentControl>
+                        </StackPanel>
+                        <StackPanel>
+                            <ContentControl x:Name="Card_8" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" 
                                         Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="8">
-                                        <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
+                                <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
                                                 Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
-                                            <Image Source="Assets/Iconos/tornillo.png" Height="70" VerticalAlignment="Top"/>
-                                            <TextBlock FontSize="16" TextWrapping="Wrap" 
+                                    <Image Source="Assets/Iconos/tornillo.png" Height="70" VerticalAlignment="Top"/>
+                                    <TextBlock FontSize="16" TextWrapping="Wrap" 
                                Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
-                                        </StackPanel>
-                                    </ContentControl>
                                 </StackPanel>
+                            </ContentControl>
+                        </StackPanel>
 
                         <StackPanel>
                             <ContentControl x:Name="Card_9" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" 
@@ -237,44 +237,31 @@
                         </StackPanel>
 
                     </GridView>
-
-                        <!--<GridView x:Name="MiGridView" ItemsSource="123456789ABDCDEFGHIJKLMNOPQRSTU" Width="656" Height="440"
-                           DragOver="Drag_Over" AllowDrop="True" HorizontalAlignment="Center">
-                    <GridView.ItemTemplate>
-                        <DataTemplate>
-                            <ContentControl  DragStarting="Drag_Starting" CanDrag="True">
-                                <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
-                                                Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
-                                    <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top"/>
-                                    <TextBlock FontSize="16" TextWrapping="Wrap" 
-                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
-                                </StackPanel>
-                            </ContentControl>
-                        </DataTemplate>
-                    </GridView.ItemTemplate>
-                </GridView>-->
-            </StackPanel>
+                </StackPanel>
 
         </StackPanel>
         </Viewbox>
 
         <!--SELECTOR MENU-->
         <Viewbox Grid.Row="3">
-        <StackPanel  
-                    Orientation="Horizontal" 
-                    VerticalAlignment="Center" 
+            <StackPanel  
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center"
                     HorizontalAlignment="Center"
-                    Spacing="100">
-                <Button Click="Go_Shop" Background="DodgerBlue" IsTabStop="True" UseSystemFocusVisuals="True" TabIndex="9">
-                <Image Source="Assets/Iconos/tienda.png" HorizontalAlignment="Right" Margin="5" Height="250" />
-            </Button>
-                <Button Click="Go_SelectScreen" Background="DodgerBlue" IsTabStop="True" UseSystemFocusVisuals="True" TabIndex="10">
-                <Image Source="Assets/Iconos/gamepad.png" HorizontalAlignment="Right" Margin="5" Height="250"/>
-            </Button>
-                <Button Background="DodgerBlue" IsTabStop="True" UseSystemFocusVisuals="True" TabIndex="11">
-                <Image Source="Assets/Iconos/mazo.png" HorizontalAlignment="Right" Margin="5"/>
-            </Button>
-        </StackPanel>
+                    Spacing="400">
+                <Button x:Name="tiendaButton" Style="{x:Null}" Click="Go_Shop" Background="DodgerBlue"  IsTabStop="True" 
+                        UseSystemFocusVisuals="True" TabIndex="2" >
+                    <Image Source="Assets/Iconos/tienda.png" HorizontalAlignment="Right" Margin="5" Height="250" />
+                </Button>
+                <Button Style="{x:Null}" Background="DodgerBlue" Click="Go_SelectScreen" IsTabStop="True"
+                        UseSystemFocusVisuals="True" TabIndex="3">
+                    <Image Source="Assets/Iconos/gamepad.png" HorizontalAlignment="Right" Margin="5" Height="250"/>
+                </Button>
+                <Button x:Name="mazoButton" Style="{x:Null}" Background="DodgerBlue"  IsTabStop="True" 
+                        UseSystemFocusVisuals="True" TabIndex="4" >
+                    <Image Source="Assets/Iconos/mazo.png" HorizontalAlignment="Right" Margin="5" />
+                </Button>
+            </StackPanel>
         </Viewbox>
     </Grid>
 </Page>
