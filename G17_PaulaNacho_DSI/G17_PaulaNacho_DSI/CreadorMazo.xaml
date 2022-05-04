@@ -68,7 +68,7 @@
 
                     <StackPanel Orientation="Vertical" Background="LightGreen" 
                             BorderBrush="DarkGreen" CornerRadius="8" BorderThickness="5"
-                            Height="446" Width="640">
+                            Height="473" Width="640">
 
 
                         <StackPanel x:Name="MazoActual" >
@@ -79,10 +79,8 @@
                                                 AllowDrop="True" Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="0">
                                             <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
-                                                Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
+                                                Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
                                                 <Image Source="Assets/Iconos/book.png" Height="70" VerticalAlignment="Top"/>
-                                                <TextBlock FontSize="16" TextWrapping="Wrap" 
-                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
                                             </StackPanel>
                                         </ContentControl>
                                     </StackPanel>
@@ -94,10 +92,8 @@
                                                 Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="1">
                                             <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
-                                                Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
+                                                Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
                                                 <Image Source="Assets/Iconos/eyeCross.png" Height="70" VerticalAlignment="Top"/>
-                                                <TextBlock FontSize="16" TextWrapping="Wrap" 
-                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
                                             </StackPanel>
                                         </ContentControl>
                                     </StackPanel>
@@ -109,10 +105,8 @@
                                                 Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="2">
                                             <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
-                                                Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
+                                                Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
                                                 <Image Source="Assets/Iconos/flame.png" Height="70" VerticalAlignment="Top"/>
-                                                <TextBlock FontSize="16" TextWrapping="Wrap" 
-                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
                                             </StackPanel>
                                         </ContentControl>
                                     </StackPanel>
@@ -125,10 +119,8 @@
                                                 DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="3">
                                             <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
-                                                Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
+                                                Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
                                                 <Image Source="Assets/Iconos/lucha.png" Height="70" VerticalAlignment="Top"/>
-                                                <TextBlock FontSize="16" TextWrapping="Wrap" 
-                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
                                             </StackPanel>
                                         </ContentControl>
                                     </StackPanel>
@@ -140,10 +132,8 @@
                                                 Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="4">
                                             <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
-                                                Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
+                                                Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
                                                 <Image Source="Assets/Iconos/objetivo.png" Height="70" VerticalAlignment="Top"/>
-                                                <TextBlock FontSize="16" TextWrapping="Wrap" 
-                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
                                             </StackPanel>
                                         </ContentControl>
                                     </StackPanel>
@@ -155,10 +145,8 @@
                                                 Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="5">
                                             <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
-                                                Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
+                                                Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
                                                 <Image Source="Assets/Iconos/sword.png" Height="70" VerticalAlignment="Top"/>
-                                                <TextBlock FontSize="16" TextWrapping="Wrap" 
-                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
                                             </StackPanel>
                                         </ContentControl>
                                     </StackPanel>
@@ -183,10 +171,9 @@
                                     <ContentControl x:Name="Card_6" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" UseSystemFocusVisuals="False"
                                         Drop="CardDrop" DragOver="Drag_Over">
                                         <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
-                                                Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
+                                                Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
                                             <Image Source="Assets/Iconos/eyeRed.png" Height="70" VerticalAlignment="Top"/>
-                                            <TextBlock FontSize="16" TextWrapping="Wrap" 
-                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
+
                                         </StackPanel>
                                     </ContentControl>
                                 </StackPanel>
@@ -197,10 +184,8 @@
                                     <ContentControl x:Name="Card_7" CanDrag="True" DragStarting="Drag_Starting" AllowDrop="True" Drop="CardDrop" DragOver="Drag_Over" 
                                             IsTabStop="True" UseSystemFocusVisuals="True" TabIndex="7" >
                                         <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
-                                                Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
+                                                Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
                                             <Image Source="Assets/Iconos/pata.png" Height="70" VerticalAlignment="Top"/>
-                                            <TextBlock FontSize="16" TextWrapping="Wrap" 
-                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
                                         </StackPanel>
                                     </ContentControl>
                                 </StackPanel>
@@ -212,10 +197,8 @@
                                         Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="8">
                                         <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
-                                                Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
+                                                Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
                                             <Image Source="Assets/Iconos/tornillo.png" Height="70" VerticalAlignment="Top"/>
-                                            <TextBlock FontSize="16" TextWrapping="Wrap" 
-                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
                                         </StackPanel>
                                     </ContentControl>
                                 </StackPanel>
@@ -229,10 +212,8 @@
                                         Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="8">
                                         <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
-                                                Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
+                                                Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
                                             <Image Source="Assets/Iconos/flame.png" Height="70" VerticalAlignment="Top"/>
-                                            <TextBlock FontSize="16" TextWrapping="Wrap" 
-                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
                                         </StackPanel>
                                     </ContentControl>
                                 </StackPanel>
@@ -244,10 +225,8 @@
                                         Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="6">
                                         <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
-                                                Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
+                                                Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
                                             <Image Source="Assets/Iconos/eyeRed.png" Height="70" VerticalAlignment="Top"/>
-                                            <TextBlock FontSize="16" TextWrapping="Wrap" 
-                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
                                         </StackPanel>
                                     </ContentControl>
                                 </StackPanel>
@@ -259,10 +238,8 @@
                                                 Drop="CardDrop" DragOver="Drag_Over" IsTabStop="True" 
                                                 UseSystemFocusVisuals="True" TabIndex="4">
                                         <StackPanel Orientation="Vertical" Spacing="2" Margin="23"
-                                                Background="DarkGray" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
+                                                Background="White" BorderBrush="Black" CornerRadius="8" BorderThickness="5" Width="105" Height="113">
                                             <Image Source="Assets/Iconos/objetivo.png" Height="70" VerticalAlignment="Top"/>
-                                            <TextBlock FontSize="16" TextWrapping="Wrap" 
-                               Text="Card Name" Width="86" Height="30" TextAlignment="Center" Margin="0,0,0,-1"/>
                                         </StackPanel>
                                     </ContentControl>
                                 </StackPanel>
