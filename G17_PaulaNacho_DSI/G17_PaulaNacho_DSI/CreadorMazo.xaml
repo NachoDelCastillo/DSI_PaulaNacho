@@ -269,6 +269,7 @@
                 </Button>
             </StackPanel>
         </Viewbox>
+        <MediaElement x:Name="MiMusica" Source="Assets/Sonido/deck.mp3"/>
     </Grid>
 </Page>
 

@@ -203,5 +203,7 @@
                 </Button>
             </StackPanel>
         </Viewbox>
+        <MediaElement x:Name="MiMusica" Source="Assets/Sonido/tienda.mp3"/>
+
     </Grid>
 </Page>

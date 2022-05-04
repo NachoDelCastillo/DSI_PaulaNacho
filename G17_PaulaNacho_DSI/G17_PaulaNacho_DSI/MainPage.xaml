@@ -104,7 +104,7 @@
             <Image Source="Assets/Iconos/dinero.png"  Margin="15" />
         </StackPanel>
         </Viewbox>
-
+        <MediaElement x:Name="MiMusica" Source="Assets/Sonido/menu.mp3"/>
 
     </Grid>
 </Page>
