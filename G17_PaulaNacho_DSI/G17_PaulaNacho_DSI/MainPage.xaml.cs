@@ -42,7 +42,8 @@ namespace G17_PaulaNacho_DSI
                 else
                     Dinero.Text = (string)e.Parameter;
             }
-            
+
+            UpdateLanguageTexts();
         }
 
         private void Go_Shop(object sender, RoutedEventArgs e)
@@ -66,6 +67,28 @@ namespace G17_PaulaNacho_DSI
         private void StartBattleButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Combate));
+        }
+
+
+
+        void UpdateLanguageTexts()
+        {
+            if (App.idioma == 0)
+            {
+                Historia_Texto.Text = "Historia";
+                ExplicacionHistoria_Texto.Text = "Embárcate en esta aventura para salvar el reino de Oniria";
+                Lucha_Texto.Text = "Lucha";
+                ExplicacionLucha_Texto.Text = "¡Aguanta luchando contra los enemigos más fuertes!";
+                //Salir_Texto.Text = "Salir Del Juego";
+            }
+            else
+            {
+                Historia_Texto.Text = "Story";
+                ExplicacionHistoria_Texto.Text = "Embark on this adventure to save the kingdom of Oniria";
+                Lucha_Texto.Text = "knockdown";
+                ExplicacionLucha_Texto.Text = "Enduring fighting against the strongest enemies!";
+               // Salir_Texto.Text = "Exit Game";
+            }
         }
     }
 }
