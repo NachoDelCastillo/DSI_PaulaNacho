@@ -33,7 +33,6 @@ namespace G17_PaulaNacho_DSI
             UpdateLanguageTexts();
         }
 
-
         private void goToMenu(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));

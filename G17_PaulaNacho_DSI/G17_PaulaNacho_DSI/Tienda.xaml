@@ -58,7 +58,7 @@
         <Viewbox Grid.Row="1">
             <Grid >
                 <Image Width="800" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/banner.png"/>
-                <TextBlock Text="TIENDA" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold"/>
+                <TextBlock x:Name="Tienda_Texto" Text="TIENDA" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold"/>
             </Grid>
         </Viewbox>
 
