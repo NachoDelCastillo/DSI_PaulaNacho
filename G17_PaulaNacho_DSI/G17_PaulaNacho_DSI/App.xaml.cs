@@ -36,6 +36,8 @@ namespace G17_PaulaNacho_DSI
         // Inicialmente en español
         public static int idioma = 0;
 
+        public static int dinero = 1200;
+
         /// <summary>
         /// Se invoca cuando la aplicación la inicia normalmente el usuario final. Se usarán otros puntos
         /// de entrada cuando la aplicación se inicie para abrir un archivo específico, por ejemplo.

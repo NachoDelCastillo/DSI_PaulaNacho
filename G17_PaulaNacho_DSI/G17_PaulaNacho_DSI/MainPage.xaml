@@ -37,8 +37,8 @@
                         UseSystemFocusVisuals="True" TabIndex="0" >
                     <StackPanel Orientation="Vertical" Spacing="2" >
                         <Image Source="Assets/Iconos/historia.png" Height="80" VerticalAlignment="Top"/>
-                        <TextBlock FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Text="Historia"></TextBlock>
-                        <TextBlock FontSize="27" TextWrapping="Wrap" TextAlignment="Center"
+                        <TextBlock x:Name="Historia_Texto" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Text="Historia"></TextBlock>
+                        <TextBlock x:Name="ExplicacionHistoria_Texto" FontSize="27" TextWrapping="Wrap" TextAlignment="Center"
                                Text="Embárcate en esta aventura para salvar el reino de Oniria"></TextBlock>
                     </StackPanel>
                 </Button>
@@ -48,8 +48,8 @@
                         UseSystemFocusVisuals="True" TabIndex="1" >
                     <StackPanel Orientation="Vertical" Spacing="2" >
                         <Image Source="Assets/Iconos/lucha.png" Height="80" VerticalAlignment="Top"/>
-                        <TextBlock FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Text="Lucha"></TextBlock>
-                        <TextBlock FontSize="27" TextAlignment="Center" TextWrapping="Wrap" Text="¡Aguanta luchando contra los enemigos más fuertes!"></TextBlock>
+                        <TextBlock x:Name="Lucha_Texto" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Text="Lucha"></TextBlock>
+                        <TextBlock x:Name="ExplicacionLucha_Texto" FontSize="27" TextAlignment="Center" TextWrapping="Wrap" Text="¡Aguanta luchando contra los enemigos más fuertes!"></TextBlock>
                     </StackPanel>
                 </Button>
             </StackPanel>
@@ -97,7 +97,7 @@
                        VerticalAlignment="Center"
                        Foreground="White"
                        TextAlignment="Center"
-                       Text="1200"
+                       Text="{x:Bind local:App.dinero}"
                        Margin="20,5,5,5"
                        FontWeight="Bold" FontSize="200">
             </TextBlock>
