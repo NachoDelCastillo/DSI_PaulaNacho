@@ -34,9 +34,11 @@ namespace G17_PaulaNacho_DSI
 
         // 0 = español / 1 = Ingles
         // Inicialmente en español
-        public static int idioma = 0;
+        static public int idioma = 0;
 
-        public static int dinero = 1200;
+        static public int dinero = 1200;
+
+        static public double volumenMusica = .5f;
 
         /// <summary>
         /// Se invoca cuando la aplicación la inicia normalmente el usuario final. Se usarán otros puntos

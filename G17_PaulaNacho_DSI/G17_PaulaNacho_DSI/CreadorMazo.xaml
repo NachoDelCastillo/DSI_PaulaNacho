@@ -269,7 +269,7 @@
                 </Button>
             </StackPanel>
         </Viewbox>
-        <MediaElement x:Name="MiMusica" Source="Assets/Sonido/deck.mp3"/>
+        <MediaElement x:Name="MiMusica" Source="Assets/Sonido/deck.mp3" Volume="{x:Bind local:App.volumenMusica}" />
     </Grid>
 </Page>
 

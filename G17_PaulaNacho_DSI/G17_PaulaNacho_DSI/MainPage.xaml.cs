@@ -58,7 +58,6 @@ namespace G17_PaulaNacho_DSI
         }
 
 
-
         void UpdateLanguageTexts()
         {
             if (App.idioma == 0)
@@ -67,7 +66,6 @@ namespace G17_PaulaNacho_DSI
                 ExplicacionHistoria_Texto.Text = "Embárcate en esta aventura para salvar el reino de Oniria";
                 Lucha_Texto.Text = "Lucha";
                 ExplicacionLucha_Texto.Text = "¡Aguanta luchando contra los enemigos más fuertes!";
-                //Salir_Texto.Text = "Salir Del Juego";
             }
             else
             {
@@ -75,7 +73,6 @@ namespace G17_PaulaNacho_DSI
                 ExplicacionHistoria_Texto.Text = "Embark on this adventure to save the kingdom of Oniria";
                 Lucha_Texto.Text = "knockdown";
                 ExplicacionLucha_Texto.Text = "Enduring fighting against the strongest enemies!";
-               // Salir_Texto.Text = "Exit Game";
             }
         }
     }

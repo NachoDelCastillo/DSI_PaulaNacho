@@ -198,7 +198,6 @@ namespace G17_PaulaNacho_DSI
             }
         }
 
-
         void UpdateLanguageTexts()
         {
             if (App.idioma == 0)

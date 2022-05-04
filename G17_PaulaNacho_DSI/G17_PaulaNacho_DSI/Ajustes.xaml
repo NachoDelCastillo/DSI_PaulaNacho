@@ -52,12 +52,12 @@
                     <StackPanel HorizontalAlignment="Center" Grid.Row="2" Orientation="Horizontal" Spacing="30">
                         <Image Width="60" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/volumen.png"/>
                         <Slider Maximum="10" Width="300" VerticalAlignment="Center" TickFrequency="10" IsTabStop="True" 
-                                TabIndex="0" UseSystemFocusVisuals="True"/>
+                                TabIndex="0" UseSystemFocusVisuals="True" Value="5"/>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Center" Grid.Row="2" Orientation="Horizontal" Spacing="30">
                         <Image Width="60" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/music.png"/>
-                            <Slider Maximum="10" Width="300" VerticalAlignment="Center" TickFrequency="10" IsTabStop="True" 
-                                TabIndex="1" UseSystemFocusVisuals="True" />
+                            <Slider x:Name="MusicSlider" Maximum="10" Width="300" VerticalAlignment="Center" TickFrequency="10" IsTabStop="True" 
+                                TabIndex="1" UseSystemFocusVisuals="True" ValueChanged="VolumeChanged"/>
                     </StackPanel>
                 </StackPanel>
 
@@ -113,6 +113,8 @@
 
         </StackPanel>
         </Viewbox>
+
+        <MediaElement x:Name="MiMusica" Source="Assets/Sonido/tienda.mp3" Volume="{x:Bind local:App.volumenMusica}" />
 
     </Grid>
 </Page>

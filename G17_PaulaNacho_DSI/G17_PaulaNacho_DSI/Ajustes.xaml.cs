@@ -31,6 +31,9 @@ namespace G17_PaulaNacho_DSI
         {
             base.OnNavigatedTo(e);
             UpdateLanguageTexts();
+
+            // Cambiar el valor de la barra de volumen
+            MusicSlider.Value = App.volumenMusica * 10;
         }
 
         private void goToMenu(object sender, RoutedEventArgs e)
@@ -77,6 +80,12 @@ namespace G17_PaulaNacho_DSI
                 MenuPrincipal_Texto.Text = "Main Menu";
                 Salir_Texto.Text = "Exit Game";
             }
+        }
+
+        private void VolumeChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            App.volumenMusica = e.NewValue/10;
+            MiMusica.Volume = App.volumenMusica;
         }
     }
 }
