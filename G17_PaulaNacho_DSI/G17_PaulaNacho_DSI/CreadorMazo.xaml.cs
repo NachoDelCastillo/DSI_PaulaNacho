@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.System;
 using Windows.UI.Core;
 using Windows.UI.Input;
 using Windows.UI.Xaml;
@@ -28,6 +29,11 @@ namespace G17_PaulaNacho_DSI
         bool ClickPulsado = false;
         CoreCursor CursorHand = null;
         CoreCursor CursorPin = null;
+
+
+        // Carta seleccionada
+        ContentControl cardSelected;
+
 
         public CreadorMazo()
         {
@@ -123,6 +129,10 @@ namespace G17_PaulaNacho_DSI
             // Carta en la que se ha depositado una carta
             // (objeto que ha generado el evento drop)
             ContentControl cardDrop = e.OriginalSource as ContentControl;
+
+            // Si se ha dropeado una carta sobre si misma
+            if (cardDrag == cardDrop) return;
+
             changeCardsPositions(cardDrop, cardDrag);
         }
 
@@ -136,6 +146,63 @@ namespace G17_PaulaNacho_DSI
 
             mazoParent.Children.Add(cardDrag);
             cartaParent.Children.Add(cardDrop);
+        }
+
+        private void CardClicked(object sender, RoutedEventArgs e)
+        {
+            Button button = e.OriginalSource as Button;
+            StackPanel sp = button.Content as StackPanel;
+            ContentControl cc = sp.Children[0] as ContentControl;
+
+            if (cardSelected == null)
+                cardSelected = cc;
+            else
+            {
+                // Si se ha clickado sobre la misma carta otra vez
+                // Ignorar el metodo
+                if (cardSelected == cc)
+                    return;
+
+                // Si por el otro lado habia carta seleccionada
+                // cambiarla de lugar por la que se acaba de seleccionar
+                changeCardsPositions(cc, cardSelected);
+
+                // Cuando se cambien las cartas
+                // Resetear la informacion de carta seleccionada
+                cardSelected = null;
+            }
+        }
+
+        private void Key_Down(object sender, KeyRoutedEventArgs e)
+        {
+            //StackPanel sp = FocusManager.GetFocusedElement() as StackPanel;
+            //ContentControl cc = sp.Children[0] as ContentControl;
+
+            //ContentControl cc = FocusManager.GetFocusedElement() as ContentControl;
+
+            ContentControl cc = e.OriginalSource as ContentControl;
+
+
+            // Si se ha hecho click sobre un objeto que no es una carta, ignorar el input
+            if (cc == null) return;
+
+            switch (e.Key)
+            {
+                case VirtualKey.GamepadX:
+                case VirtualKey.Enter:
+                    e.Handled = true;
+
+                    // Si no habia carta seleccionada, elegir esta
+                    if (cardSelected == null)
+                        cardSelected = cc;
+                    else
+                    {
+                        // Si por el otro lado habia carta seleccionada
+                        // cambiarla de lugar por la que se acaba de seleccionar
+                        changeCardsPositions(cc, cardSelected);
+                    }
+                    break;
+            }
         }
     }
 }
