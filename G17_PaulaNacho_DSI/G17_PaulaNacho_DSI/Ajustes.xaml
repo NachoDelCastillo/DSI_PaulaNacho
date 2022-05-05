@@ -51,8 +51,8 @@
 
                     <StackPanel HorizontalAlignment="Center" Grid.Row="2" Orientation="Horizontal" Spacing="30">
                         <Image Width="60" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/volumen.png"/>
-                        <Slider Maximum="10" Width="300" VerticalAlignment="Center" TickFrequency="10" IsTabStop="True" 
-                                TabIndex="0" UseSystemFocusVisuals="True" Value="5"/>
+                            <Slider x:Name="SoundSlider" Maximum="10" Width="300" VerticalAlignment="Center" TickFrequency="10" IsTabStop="True" 
+                                TabIndex="0" UseSystemFocusVisuals="True" ValueChanged="SoundVolumeChanged"/>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Center" Grid.Row="2" Orientation="Horizontal" Spacing="30">
                         <Image Width="60" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/Iconos/music.png"/>
@@ -82,16 +82,15 @@
                             <TextBlock FontWeight="Bold" HorizontalAlignment="Center"
                                    Text="English"/>
                         </Button>
-
                     </StackPanel>
                 </StackPanel>
 
                 <StackPanel x:Name="MiStackpanel" Orientation="Horizontal" HorizontalAlignment="Center"
                         Background="YellowGreen" BorderThickness="8" BorderBrush="Green" 
                         CornerRadius ="8"
-                        Spacing="30" Height="163" Width="827">
+                        Spacing="30" Height="163">
 
-                <Button Click="goBackButtonClick" IsTabStop="True" 
+                <Button Click="goBackButtonClick" IsTabStop="True"  HorizontalAlignment="Left"
                                 TabIndex="4" UseSystemFocusVisuals="True">
                     <TextBlock x:Name="Volver_Texto" FontWeight="Bold" HorizontalAlignment="Center"
                                    Text="Volver"/>
@@ -103,7 +102,7 @@
                                    Text="Menu Principal"/>
                 </Button>
 
-                <Button Click="ExitButtonClick" IsTabStop="True" 
+                <Button Click="ExitButtonClick" IsTabStop="True"  HorizontalAlignment="Right"
                             TabIndex="6" UseSystemFocusVisuals="True">
                 <TextBlock x:Name="Salir_Texto" FontWeight="Bold" HorizontalAlignment="Center"
                                    Text="Salir del juego"/>
@@ -115,7 +114,7 @@
         </Viewbox>
 
         <MediaElement x:Name="MiMusica" Source="Assets/Sonido/tienda.mp3" Volume="{x:Bind local:App.volumenMusica}" />
-        <MediaElement x:Name="CambioPag" Source="Assets/Sonido/cambioPag.wav" AutoPlay="False" />
+        <MediaElement x:Name="CambioPag" Source="Assets/Sonido/cambioPag.wav" AutoPlay="False" Volume="{x:Bind local:App.volumenSonido}"/>
 
     </Grid>
 </Page>

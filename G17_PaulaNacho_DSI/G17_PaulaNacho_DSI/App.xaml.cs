@@ -39,6 +39,7 @@ namespace G17_PaulaNacho_DSI
         static public int dinero = 1200;
 
         static public double volumenMusica = .5f;
+        static public double volumenSonido = .5f;
 
         /// <summary>
         /// Se invoca cuando la aplicación la inicia normalmente el usuario final. Se usarán otros puntos
