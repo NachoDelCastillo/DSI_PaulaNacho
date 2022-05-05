@@ -42,22 +42,27 @@ namespace G17_PaulaNacho_DSI
 
         private void goToMenu(object sender, RoutedEventArgs e)
         {
+            CambioPag.Play();
             Frame.Navigate(typeof(MainPage));
         }
 
-        private void goBackButtonClick(object sender, RoutedEventArgs e)
-        {
+        private void goBackButtonClick(object sender, RoutedEventArgs e) 
+        {   
+            CambioPag.Play();
             if (Frame.CanGoBack)
                 Frame.GoBack();
         }
 
         private void ExitButtonClick(object sender, RoutedEventArgs e)
         {
+            CambioPag.Play();
             Application.Current.Exit();
         }
 
         private void ChangeLaguage(object sender, RoutedEventArgs e)
         {
+            CambioPag.Play();
+
             if (e.OriginalSource == SpanishButton)
                 App.idioma = 0;
             else

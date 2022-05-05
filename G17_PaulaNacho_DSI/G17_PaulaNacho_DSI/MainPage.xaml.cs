@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.System;
+using System.Windows;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
 
@@ -37,23 +38,27 @@ namespace G17_PaulaNacho_DSI
         private void Go_Shop(object sender, RoutedEventArgs e)
         {
             string currentMoney = Dinero.Text;
+            CambioPag.Play();
             Frame.Navigate(typeof(Tienda), currentMoney);
         }
 
         private void Go_DeckCreator(object sender, RoutedEventArgs e)
         {
             string currentMoney = Dinero.Text;
+            CambioPag.Play();
             Frame.Navigate(typeof(CreadorMazo), currentMoney);
         }
 
         private void Go_Settings(object sender, RoutedEventArgs e)
         {
+            CambioPag.Play();
             Frame.Navigate(typeof(Ajustes));
         }
 
 
         private void StartBattleButton_Click(object sender, RoutedEventArgs e)
         {
+            CambioPag.Play();
             Frame.Navigate(typeof(Combate));
         }
 

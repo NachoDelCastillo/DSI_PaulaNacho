@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -46,7 +46,9 @@ namespace G17_PaulaNacho_DSI
         //Navegacion ajustes
         private void Go_Settings(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Ajustes), "sx");
+            Frame.Navigate(typeof(Ajustes), "combate");
+            CambioPag.Play();
+            Frame.Navigate(typeof(Ajustes), "combate");
         }
 
         //Mostrar texto sobre estado del jugador

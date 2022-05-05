@@ -115,6 +115,7 @@
         </Viewbox>
 
         <MediaElement x:Name="MiMusica" Source="Assets/Sonido/tienda.mp3" Volume="{x:Bind local:App.volumenMusica}" />
+        <MediaElement x:Name="CambioPag" Source="Assets/Sonido/cambioPag.wav" AutoPlay="False" />
 
     </Grid>
 </Page>

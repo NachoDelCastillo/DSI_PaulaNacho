@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -53,17 +53,20 @@ namespace G17_PaulaNacho_DSI
         // Botones
         private void Go_Shop(object sender, RoutedEventArgs e)
         {
+            CambioPag.Play();
             string currentMoney = Dinero.Text;
             Frame.Navigate(typeof(Tienda), currentMoney);
         }
 
         private void Go_SelectScreen(object sender, RoutedEventArgs e)
         {
+            CambioPag.Play();
             Frame.Navigate(typeof(MainPage));
         }
 
         private void Go_Settings(object sender, RoutedEventArgs e)
         {
+            CambioPag.Play();
             Frame.Navigate(typeof(Ajustes));
         }
 

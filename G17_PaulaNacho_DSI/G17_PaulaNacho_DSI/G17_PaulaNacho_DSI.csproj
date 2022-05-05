@@ -180,7 +180,9 @@
     <Content Include="Assets\Iconos\tienda.png" />
     <Content Include="Assets\Iconos\tornillo.png" />
     <Content Include="Assets\Iconos\volumen.png" />
+    <Content Include="Assets\Sonido\cambioPag.wav" />
     <Content Include="Assets\Sonido\deck.mp3" />
+    <Content Include="Assets\Sonido\enterGame.wav" />
     <Content Include="Assets\Sonido\menu.mp3" />
     <Content Include="Assets\Sonido\tienda.mp3" />
     <Content Include="Properties\Default.rd.xml" />
