@@ -53,6 +53,7 @@ namespace G17_PaulaNacho_DSI
         // Botones
         private void Go_Shop(object sender, RoutedEventArgs e)
         {
+            CambioPag.Play();
             string currentMoney = Dinero.Text;
             Frame.Navigate(typeof(Tienda), currentMoney);
         }
@@ -60,11 +61,13 @@ namespace G17_PaulaNacho_DSI
         private void Go_SelectScreen(object sender, RoutedEventArgs e)
         {
             string currentMoney = Dinero.Text;
+            CambioPag.Play();
             Frame.Navigate(typeof(MainPage), currentMoney);
         }
 
         private void Go_Settings(object sender, RoutedEventArgs e)
         {
+            CambioPag.Play();
             Frame.Navigate(typeof(Ajustes));
         }
 

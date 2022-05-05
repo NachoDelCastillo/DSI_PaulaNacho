@@ -46,6 +46,7 @@ namespace G17_PaulaNacho_DSI
         //Navegacion ajustes
         private void Go_Settings(object sender, RoutedEventArgs e)
         {
+            CambioPag.Play();
             Frame.Navigate(typeof(Ajustes));
         }
 

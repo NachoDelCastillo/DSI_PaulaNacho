@@ -38,17 +38,20 @@ namespace G17_PaulaNacho_DSI
         private void Go_SelectScreen(object sender, RoutedEventArgs e)
         {
             string currentMoney = Dinero.Text;
+            CambioPag.Play();
             Frame.Navigate(typeof(MainPage), currentMoney);
         }
 
         private void Go_DeckCreator(object sender, RoutedEventArgs e)
         {
             string currentMoney = Dinero.Text;
+            CambioPag.Play();
             Frame.Navigate(typeof(CreadorMazo), currentMoney);
         }
 
         private void Go_Settings(object sender, RoutedEventArgs e)
         {
+            CambioPag.Play();
             string currentMoney = Dinero.Text;
             Frame.Navigate(typeof(Ajustes), currentMoney);
         }
