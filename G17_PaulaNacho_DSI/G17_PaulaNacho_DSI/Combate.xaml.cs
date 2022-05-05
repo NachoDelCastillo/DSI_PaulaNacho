@@ -24,6 +24,7 @@ namespace G17_PaulaNacho_DSI
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
+   
     public sealed partial class Combate : Page
     {
         //Timer para hacer desaparecer las cartas tras un segundo
@@ -31,7 +32,8 @@ namespace G17_PaulaNacho_DSI
         //Variabe para guardar la carta que se acaba de poner en un enemigo
         Image cartaActualBat = null;
         Image cartaActualOgro = null;
-        int numCartasTot = 0;
+        int numCartasTot = 0; 
+        bool finTurno=false;
     public Combate()
         {
             this.InitializeComponent();
@@ -39,6 +41,7 @@ namespace G17_PaulaNacho_DSI
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             numCartasTot = MisCartas.Children.Count; //Guarda el numero de cartas que hay al empezar
+            finTurno = false;
         }
         //Navegacion ajustes
         private void Go_Settings(object sender, RoutedEventArgs e)
@@ -112,7 +115,7 @@ namespace G17_PaulaNacho_DSI
             //Coloca la carta en la posicion adecuada
             MiZonaBat.Children.Add(O);
             Point pos = e.GetPosition(MiZonaBat);
-     
+            O.CanDrag = false;
             O.SetValue(Grid.ColumnProperty, pos.X+100);
             O.SetValue(Grid.RowProperty, pos.Y+20);
 
@@ -156,7 +159,7 @@ namespace G17_PaulaNacho_DSI
             timer.Start();
             timer.Tick += Timer_Tick;
 
-            //cambiaColorBoton();
+            cambiaColorBoton();
         }
         private async void MiZonaOgro_Drop(object sender, DragEventArgs e)
         {
@@ -172,7 +175,7 @@ namespace G17_PaulaNacho_DSI
             //Coloca la carta en la posicion adecuada
             MiZonaOgro.Children.Add(O);
             Point pos = e.GetPosition(MiZonaOgro);
-        
+            O.CanDrag = false;
             O.SetValue(Canvas.LeftProperty, pos.X-40);
             O.SetValue(Canvas.TopProperty, pos.Y-100);
 
@@ -217,14 +220,14 @@ namespace G17_PaulaNacho_DSI
             //Activa el timer
             timer.Start();
             timer.Tick += Timer_Tick;
-           // cambiaColorBoton();
+           cambiaColorBoton();
         }
 
         private void FinTurno_Click(object sender, RoutedEventArgs e)
-        {   
+        {
             //Cuando pulsas el fin de turno, se quitan las cartas de las zonas de los enemigos, regresan a la zona de cartas del jugador
             //Y se reestablece su imagen original
-            
+            finTurno = true;
 
             for (int i = 0; i < numCartasTot; i++)
             {
@@ -247,13 +250,13 @@ namespace G17_PaulaNacho_DSI
                 img.Source = imageBitmap;
                 img.Visibility = Visibility.Visible;
             }
-           // cambiaColorBoton();
+           cambiaColorBoton();
         }
-        void cambiaColorBoton() //Si no ha acabado de atacar con todas las cartas el boton esta gris, cuando termina se pone rojo
+        void cambiaColorBoton() //Si no ha acabado de atacar con todas las cartas el boton esta rojo, cuando termina se pone gris
         {
-            if (MisCartas.Children.Count < 1) 
-                FinTurno.Background = new SolidColorBrush(Color.FromArgb(255, 255, 99, 71));
-            else FinTurno.Background = new SolidColorBrush(Color.FromArgb(255, 177, 182, 183));
+            if (finTurno)FinTurno.Background = new SolidColorBrush(Color.FromArgb(255, 177, 182, 183)); 
+            else FinTurno.Background = new SolidColorBrush(Color.FromArgb(255, 255, 99, 71));
+
         }
     }
 }

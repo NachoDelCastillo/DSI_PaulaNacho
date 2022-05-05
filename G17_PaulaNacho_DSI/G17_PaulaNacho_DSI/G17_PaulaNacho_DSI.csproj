@@ -144,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Combate\bat.png" />
+    <Content Include="Assets\Combate\bocadillo.png" />
     <Content Include="Assets\Combate\carta.png" />
     <Content Include="Assets\Combate\cartaBrillo.png" />
     <Content Include="Assets\Combate\dungeon.jpg" />

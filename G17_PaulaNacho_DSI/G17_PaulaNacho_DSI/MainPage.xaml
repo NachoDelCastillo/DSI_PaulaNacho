@@ -31,18 +31,20 @@
                     HorizontalAlignment="Center"  >
     
             <StackPanel Orientation="Horizontal" Margin="40" Spacing="50" >
-
-                <Button Click="StartBattleButton_Click"
-                Background="Yellow" BorderBrush="YellowGreen" IsTabStop="True" 
+                <Border Background="YellowGreen" CornerRadius="8" BackgroundSizing="OuterBorderEdge" Height="307" >
+                       <Button Click="StartBattleButton_Click"
+                         Background="Yellow" BorderBrush="YellowGreen" IsTabStop="True" 
                         UseSystemFocusVisuals="True" TabIndex="0" >
-                    <StackPanel Orientation="Vertical" Spacing="2" >
-                        <Image Source="Assets/Iconos/historia.png" Height="80" VerticalAlignment="Top"/>
-                        <TextBlock x:Name="Historia_Texto" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Text="Historia"></TextBlock>
-                        <TextBlock x:Name="ExplicacionHistoria_Texto" FontSize="27" TextWrapping="Wrap" TextAlignment="Center"
+                        <StackPanel Orientation="Vertical" Spacing="2" >
+                            <Image Source="Assets/Iconos/historia.png" Height="80" VerticalAlignment="Top"/>
+                            <TextBlock x:Name="Historia_Texto" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Text="Historia"></TextBlock>
+                            <TextBlock x:Name="ExplicacionHistoria_Texto" FontSize="27" TextWrapping="Wrap" TextAlignment="Center"
                                Text="Embárcate en esta aventura para salvar el reino de Oniria"></TextBlock>
-                    </StackPanel>
-                </Button>
+                        </StackPanel>
+                    </Button>
+                </Border>
 
+                <Border Background="DarkSlateBlue" CornerRadius="8" BackgroundSizing="OuterBorderEdge" Height="307">
                 <Button Click="StartBattleButton_Click"
                 Background="DeepSkyBlue" BorderBrush="DarkSlateBlue" IsTabStop="True" 
                         UseSystemFocusVisuals="True" TabIndex="1" >
@@ -52,6 +54,7 @@
                         <TextBlock x:Name="ExplicacionLucha_Texto" FontSize="27" TextAlignment="Center" TextWrapping="Wrap" Text="¡Aguanta luchando contra los enemigos más fuertes!"></TextBlock>
                     </StackPanel>
                 </Button>
+                </Border>
             </StackPanel>
         </Viewbox>
 
