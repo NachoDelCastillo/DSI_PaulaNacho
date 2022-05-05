@@ -86,7 +86,7 @@
                     </StackPanel>
                 </StackPanel>
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
+                <StackPanel x:Name="MiStackpanel" Orientation="Horizontal" HorizontalAlignment="Center"
                         Background="YellowGreen" BorderThickness="8" BorderBrush="Green" 
                         CornerRadius ="8"
                         Spacing="30" Height="163" Width="827">
@@ -97,7 +97,7 @@
                                    Text="Volver"/>
                 </Button>
 
-                <Button Click="goToMenu" IsTabStop="True" 
+                    <Button x:Name="MenuPrincipal_Button" Click="goToMenu" IsTabStop="True" 
                             TabIndex="5" UseSystemFocusVisuals="True">
                 <TextBlock x:Name="MenuPrincipal_Texto" FontWeight="Bold" HorizontalAlignment="Center"
                                    Text="Menu Principal"/>

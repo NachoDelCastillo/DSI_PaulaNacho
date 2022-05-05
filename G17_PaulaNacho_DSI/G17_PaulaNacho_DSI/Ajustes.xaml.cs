@@ -34,6 +34,10 @@ namespace G17_PaulaNacho_DSI
 
             // Cambiar el valor de la barra de volumen
             MusicSlider.Value = App.volumenMusica * 10;
+
+            // Si has accedido a los ajustes desde el menu, eliminar el boton de ir al menu de los ajustes
+            if (e.Parameter != "combate")
+                MiStackpanel.Children.Remove(MenuPrincipal_Button);
         }
 
         private void goToMenu(object sender, RoutedEventArgs e)

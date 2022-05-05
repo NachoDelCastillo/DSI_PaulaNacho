@@ -46,7 +46,7 @@ namespace G17_PaulaNacho_DSI
         //Navegacion ajustes
         private void Go_Settings(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Ajustes));
+            Frame.Navigate(typeof(Ajustes), "sx");
         }
 
         //Mostrar texto sobre estado del jugador

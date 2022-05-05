@@ -59,8 +59,7 @@ namespace G17_PaulaNacho_DSI
 
         private void Go_SelectScreen(object sender, RoutedEventArgs e)
         {
-            string currentMoney = Dinero.Text;
-            Frame.Navigate(typeof(MainPage), currentMoney);
+            Frame.Navigate(typeof(MainPage));
         }
 
         private void Go_Settings(object sender, RoutedEventArgs e)
