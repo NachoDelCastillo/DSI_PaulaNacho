@@ -123,6 +123,7 @@ namespace G17_PaulaNacho_DSI
             ContentControl cardDrag = FindName(name) as ContentControl;
             // Carta en la que se ha depositado una carta
             // (objeto que ha generado el evento drop)
+            if (e.OriginalSource == null) return;
             ContentControl cardDrop = e.OriginalSource as ContentControl;
 
             // Si se ha dropeado una carta sobre si misma

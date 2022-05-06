@@ -46,7 +46,6 @@ namespace G17_PaulaNacho_DSI
         //Navegacion ajustes
         private void Go_Settings(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Ajustes), "combate");
             CambioPag.Play();
             Frame.Navigate(typeof(Ajustes), "combate");
         }
@@ -96,10 +95,12 @@ namespace G17_PaulaNacho_DSI
             if (cartaActualBat != null) //Si existe una carta sobre el murcielago, quita su visibilidad
             {
                 cartaActualBat.Visibility = Visibility.Collapsed;
+                cartaActualBat = null;
             }
             if (cartaActualOgro != null) //Análogo para el ogro
             {
                 cartaActualOgro.Visibility = Visibility.Collapsed;
+                cartaActualOgro = null;
             }
         }
 
@@ -128,6 +129,11 @@ namespace G17_PaulaNacho_DSI
             img.Source =imageBitmap;
 
             //Asigna la imagen a la variable de carta del murcielago (para poder hacerla desaprecer despues)
+
+            // Si se arrastra una nueva carta antes de que desaparezca la que ya estaba
+            // Borrarla
+            if (cartaActualBat != null)
+                cartaActualBat.Visibility = Visibility.Collapsed;
 
             cartaActualBat = img;
             //Baja 3 puntos al escudo
@@ -187,6 +193,11 @@ namespace G17_PaulaNacho_DSI
             Uri imageUri = new Uri("ms-appx:///Assets/Combate/cartaBrillo.png");
             BitmapImage imageBitmap = new BitmapImage(imageUri);
             img.Source = imageBitmap;
+
+            // Si se arrastra una nueva carta antes de que desaparezca la que ya estaba
+            // Borrarla
+            if (cartaActualOgro != null)
+                cartaActualOgro.Visibility = Visibility.Collapsed;
 
             //Asigna la imagen a la variable de carta del ogro (para poder hacerla desaprecer despues)
             cartaActualOgro = img;
